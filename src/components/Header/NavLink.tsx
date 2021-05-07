@@ -7,6 +7,7 @@ interface NavLinkProps extends LinkProps {
 export const NavLink = forwardRef<NavLinkProps, "a">((props, ref) => {
     return (
         <Link
+            py="4"
             _hover={{
                 textDecoration: 'none',
                 color: "#FFF"
