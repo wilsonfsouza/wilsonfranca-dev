@@ -1,6 +1,7 @@
-import { Button, Flex, Heading, VStack, Text, Box, HStack, IconButton, Divider } from '@chakra-ui/react';
+import { Flex, Heading, VStack, Text, Box, HStack, IconButton, Divider, Link } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { CustomButton } from '../CustomButton';
+import { ExternalLink } from '../ExternalLink';
 
 export function Hero() {
     return (
@@ -53,8 +54,14 @@ export function Hero() {
 
                 <HStack spacing={["1.5rem", "2.8125rem"]} w="100%" alignItems="center" justifyContent="center" pb="3.625rem">
                     <Divider orientation="horizontal" height="2px" minWidth="10px" flex="1" color="gray.500" />
-                    <IconButton aria-label="GitHub" as={FaGithub} variant="unstyled" color="gray.500" fontSize={36} />
-                    <IconButton aria-label="LinkedIn" as={FaLinkedin} variant="unstyled" color="gray.500" fontSize={36} />
+
+                    <ExternalLink href="https://github.com/wilsonfsouza">
+                        <FaGithub fontSize={36} />
+                    </ExternalLink>
+
+                    <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
+                        <FaLinkedin fontSize={36} />
+                    </ExternalLink>
                 </HStack>
             </VStack>
 
