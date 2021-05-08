@@ -69,7 +69,7 @@ export function Hero() {
                                 fontSize={["1.25rem", "1.75rem", "2.25rem"]}
                                 maxWidth={["15.875rem", "24.875rem", "31.875rem"]}
                             >
-                                I’m a Sofware Developer based in Redding, CA
+                                I’m a Sofware Developer and UI/UX enthusiast
                         </Text>
                         </VStack>
 
