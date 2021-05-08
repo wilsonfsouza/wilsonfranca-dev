@@ -1,5 +1,6 @@
 import { Button, Flex, Heading, VStack, Text, Box, HStack, IconButton, Divider } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { CustomButton } from '../CustomButton';
 
 export function Hero() {
     return (
@@ -46,20 +47,12 @@ export function Hero() {
                         <Text fontWeight="light" fontSize={["1.25rem", "1.75rem", "2.25rem"]} maxWidth={["15.875rem", "24.875rem", "31.875rem"]}>I’m a Sofware Developer based in Redding, CA</Text>
                     </VStack>
 
-                    <Button
-                        variant="unstyled"
-                        bg="pink.600"
-                        _hover={{ filter: 'brightness(0.95)' }}
-                        w={["12.5rem", "15.625rem"]}
-                        h="3.125rem"
-                        fontSize="1rem"
-                        fontWeight="medium"
-                    >Check My Projects</Button>
+                    <CustomButton>Check My Projects</CustomButton>
+
                 </VStack>
 
                 <HStack spacing={["1.5rem", "2.8125rem"]} w="100%" alignItems="center" justifyContent="center" pb="3.625rem">
                     <Divider orientation="horizontal" height="2px" minWidth="10px" flex="1" color="gray.500" />
-
                     <IconButton aria-label="GitHub" as={FaGithub} variant="unstyled" color="gray.500" fontSize={36} />
                     <IconButton aria-label="LinkedIn" as={FaLinkedin} variant="unstyled" color="gray.500" fontSize={36} />
                 </HStack>
