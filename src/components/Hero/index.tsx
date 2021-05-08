@@ -39,8 +39,6 @@ export function Hero() {
                 }}
             >
                 <VStack
-                    zIndex="1"
-                    flex="1"
                     mx="auto"
                     h="100%"
                     maxWidth={1480}
