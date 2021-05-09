@@ -1,6 +1,6 @@
 import { Flex, Heading, VStack, Text, Box, HStack, Divider } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FadeInWhenVisible } from '../FadeInWhenVisible';
 import { CustomButton } from '../CustomButton';
 import { ExternalLink } from '../ExternalLink';
 
@@ -29,67 +29,63 @@ export function Hero() {
                 backgroundImage: 'linear-gradient(180deg, #110E11 0%, rgba(34, 30, 38, 0) 100%)',
             }}
         >
-            <motion.div
-                animate={{ scale: [0.9, 1], opacity: [0, 1] }}
-                transition={{ duration: 0.5 }}
-                style={{
-                    flex: 1,
-                    height: "100%",
-                    zIndex: 1
-                }}
+            <Flex
+                zIndex="1"
+                h="100%"
+                w="100%"
+                mx="auto"
+                maxWidth={1480}
             >
-                <VStack
-                    mx="auto"
-                    h="100%"
-                    maxWidth={1480}
-                    alignItems="start"
-                    justifyContent="space-between"
-                >
-
+                <FadeInWhenVisible>
                     <VStack
-                        spacing="10"
-                        m="auto 0"
-                        alignItems={["center", "start"]}
-                        textAlign={["center", "left"]}
+                        flex="1"
+                        alignItems="start"
+                        h="100%"
                     >
                         <VStack
-                            spacing="2"
+                            spacing="10"
                             m="auto 0"
                             alignItems={["center", "start"]}
                             textAlign={["center", "left"]}
                         >
-                            <Heading fontWeight="bold" fontSize={["2.5rem", "3rem", "4.5rem"]}>
-                                Think<Box as="span" color="pink.600">. </Box>
-                            Plan<Box as="span" color="pink.600">. </Box>
-                            Innovate<Box as="span" color="pink.600">.</Box>
-                            </Heading>
-
-                            <Text
-                                fontWeight="light"
-                                fontSize={["1.25rem", "1.75rem", "2.25rem"]}
-                                maxWidth={["15.875rem", "24.875rem", "31.875rem"]}
+                            <VStack
+                                spacing="2"
+                                m="auto 0"
+                                alignItems={["center", "start"]}
+                                textAlign={["center", "left"]}
                             >
-                                I’m a Sofware Developer and UI/UX enthusiast
-                        </Text>
+                                <Heading fontWeight="bold" fontSize={["2.5rem", "3rem", "4.5rem"]}>
+                                    Think<Box as="span" color="pink.600">. </Box>
+                                    Plan<Box as="span" color="pink.600">. </Box>
+                                    Innovate<Box as="span" color="pink.600">.</Box>
+                                </Heading>
+
+                                <Text
+                                    fontWeight="light"
+                                    fontSize={["1.25rem", "1.75rem", "2.25rem"]}
+                                    maxWidth={["15.875rem", "24.875rem", "31.875rem"]}
+                                >
+                                    I’m a Sofware Developer and UI/UX enthusiast
+                                </Text>
+                            </VStack>
+
+                            <CustomButton>Check My Projects</CustomButton>
                         </VStack>
 
-                        <CustomButton>Check My Projects</CustomButton>
+                        <HStack spacing={["1.5rem", "2.8125rem"]} w="100%" alignItems="center" justifyContent="center" pb="3.625rem">
+                            <Divider orientation="horizontal" height="2px" minWidth="10px" flex="1" color="gray.500" />
+
+                            <ExternalLink href="https://github.com/wilsonfsouza">
+                                <FaGithub fontSize={36} />
+                            </ExternalLink>
+
+                            <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
+                                <FaLinkedin fontSize={36} />
+                            </ExternalLink>
+                        </HStack>
                     </VStack>
-
-                    <HStack spacing={["1.5rem", "2.8125rem"]} w="100%" alignItems="center" justifyContent="center" pb="3.625rem">
-                        <Divider orientation="horizontal" height="2px" minWidth="10px" flex="1" color="gray.500" />
-
-                        <ExternalLink href="https://github.com/wilsonfsouza">
-                            <FaGithub fontSize={36} />
-                        </ExternalLink>
-
-                        <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
-                            <FaLinkedin fontSize={36} />
-                        </ExternalLink>
-                    </HStack>
-                </VStack>
-            </motion.div>
-
-        </Flex >
+                </FadeInWhenVisible>
+            </Flex>
+        </Flex>
     )
 }
