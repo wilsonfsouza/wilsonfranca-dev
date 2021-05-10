@@ -1,9 +1,10 @@
-import { Stack } from "@chakra-ui/react";
-import { Hero } from "../components/Hero";
-import { Section } from "../components/Section";
-import { TransitionSection } from "../components/TransitionSection";
+import { Stack, SimpleGrid, Box, VStack } from "@chakra-ui/react";
 import { FaCode, FaChartBar, FaUserAstronaut } from 'react-icons/fa';
+import { Hero } from "../components/Hero";
+import { TransitionSection } from "../components/TransitionSection";
+import { Section } from "../components/Section";
 import { Card } from "../components/Card";
+import { CustomButton } from "../components/CustomButton";
 
 export default function Home() {
   return (
@@ -36,6 +37,17 @@ export default function Home() {
             description="Friendly and accessible interfaces focused on user experience that adapts to all devices."
           />
         </Stack>
+      </Section>
+      <Section title="Featured Projects">
+        <VStack spacing="3rem" w="100%">
+          <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="2rem" w="100%">
+            <Box bg="url('/projects/smartit.png')" bgPosition="bottom" bgSize="cover" bgRepeat="no-repeat" height="23.75rem" w="100%" borderRadius="0.625rem" />
+            <Box bg="url('/projects/gobarber.png')" bgPosition="bottom" bgSize="cover" bgRepeat="no-repeat" height="23.75rem" w="100%" borderRadius="0.625rem" />
+            <Box bg="url('/projects/digiWallet.png')" bgPosition="bottom" bgSize="cover" bgRepeat="no-repeat" height="23.75rem" w="100%" borderRadius="0.625rem" />
+            <Box bg="url('/projects/gobarber.png')" bgPosition="bottom" bgSize="cover" bgRepeat="no-repeat" height="23.75rem" w="100%" borderRadius="0.625rem" />
+          </SimpleGrid>
+          <CustomButton>See All</CustomButton>
+        </VStack>
       </Section>
 
       <TransitionSection gradientDirection="upsidedown" />
