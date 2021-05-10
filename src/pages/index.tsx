@@ -1,4 +1,4 @@
-import { Flex, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { Hero } from "../components/Hero";
 import { Section } from "../components/Section";
 import { TransitionSection } from "../components/TransitionSection";
@@ -11,7 +11,13 @@ export default function Home() {
       <Hero />
       <TransitionSection gradientDirection="normal" isBellowHero={true} />
       <Section title="What I Do">
-        <HStack w="100%" spacing="2.125rem" justifyContent="space-around">
+        <Stack
+          direction={["column", "column", "row", "row"]}
+          w="100%"
+          spacing="2.125rem"
+          alignItems="center"
+          justifyContent="space-around"
+        >
           <Card
             icon={FaCode}
             title="Design + Development"
@@ -26,10 +32,10 @@ export default function Home() {
 
           <Card
             icon={FaUserAstronaut}
-            title="User-friendly Interfaces"
+            title="Friendly Interfaces"
             description="Friendly and accessible interfaces focused on user experience that adapts to all devices."
           />
-        </HStack>
+        </Stack>
       </Section>
 
       <TransitionSection gradientDirection="upsidedown" />
