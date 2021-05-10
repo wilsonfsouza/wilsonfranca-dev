@@ -19,7 +19,7 @@ export function Header() {
                 my="0"
                 maxWidth={1480}
             >
-                <Image w={["11.875rem", "15.875rem", "23.275rem"]} src="/logo.svg" alt="wilsonfranca.dev" />
+                <Image w={["9.9375rem", "11.375rem", "12.8125rem"]} src="/logo-full.svg" alt="wilsonfranca.dev" />
 
                 <Flex as="div" align="center" style={{ marginLeft: "auto" }}>
                     <NavBar />
