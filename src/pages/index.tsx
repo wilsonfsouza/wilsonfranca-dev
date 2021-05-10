@@ -10,7 +10,27 @@ export default function Home() {
     <>
       <Hero />
       <TransitionSection gradientDirection="normal" isBellowHero={true} />
+      <Section title="What I Do">
+        <HStack w="100%" spacing="2.125rem" justifyContent="space-around">
+          <Card
+            icon={FaCode}
+            title="Design + Development"
+            description="Modern experiences optimized for performance, search engines, and converting users to customers."
+          />
 
+          <Card
+            icon={FaChartBar}
+            title="Data Analysis"
+            description="Modern experiences optimized for performance, search engines, and converting users to customers."
+          />
+
+          <Card
+            icon={FaUserAstronaut}
+            title="User-friendly Interfaces"
+            description="Friendly and accessible interfaces focused on user experience that adapts to all devices."
+          />
+        </HStack>
+      </Section>
 
       <TransitionSection gradientDirection="upsidedown" />
     </>
