@@ -1,8 +1,16 @@
 import { Flex, HStack } from '@chakra-ui/react';
 import { Logo } from '../Logo';
 import { NavBar } from './NavBar';
+import { useRouter } from 'next/router';
+import { useCallback } from 'react';
 
 export function Header() {
+    const router = useRouter();
+
+    const handleLogoRedirectToHome = useCallback(() => {
+        router.push('/');
+    }, [router]);
+
     return (
         <Flex
             as="header"
@@ -20,7 +28,8 @@ export function Header() {
                 my="0"
                 maxWidth={1480}
             >
-                <Logo />
+
+                <Logo isClickable={true} onClickFunct={handleLogoRedirectToHome} />
 
                 <Flex as="div" align="center" style={{ marginLeft: "auto" }}>
                     <NavBar />
