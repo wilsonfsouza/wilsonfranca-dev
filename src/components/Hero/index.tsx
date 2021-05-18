@@ -3,8 +3,16 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FadeInWhenVisible } from '../FadeInWhenVisible';
 import { CustomButton } from '../CustomButton';
 import { ExternalLink } from '../ExternalLink';
+import { useRouter } from 'next/router';
+import { useCallback } from 'react';
 
 export function Hero() {
+    const router = useRouter();
+
+    const redirectToPortfolio = useCallback(() => {
+        router.push('/portfolio');
+    }, [router]);
+
     return (
         <Flex
             as="section"
@@ -69,7 +77,7 @@ export function Hero() {
                                 </Text>
                             </VStack>
 
-                            <CustomButton>Check My Projects</CustomButton>
+                            <CustomButton onClick={redirectToPortfolio}>Check My Projects</CustomButton>
                         </VStack>
 
                         <HStack spacing={["1.5rem", "2.8125rem"]} w="100%" alignItems="center" justifyContent="center" pb="3.625rem">

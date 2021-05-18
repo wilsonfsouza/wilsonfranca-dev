@@ -7,8 +7,16 @@ import { Card } from "../components/Card";
 import { CustomButton } from "../components/CustomButton";
 import { ProjectCard } from "../components/ProjectCard";
 import { FadeInWhenVisible } from "../components/FadeInWhenVisible";
+import { useRouter } from "next/router";
+import { useCallback } from "react";
 
 export default function Home() {
+  const router = useRouter();
+
+  const redirectToPortfolio = useCallback(() => {
+    router.push('/portfolio');
+  }, [router]);
+
   return (
     <>
       <Hero />
@@ -60,7 +68,7 @@ export default function Home() {
               <Box bg="url('/projects/gobarber.png')" bgPosition="bottom" bgSize="cover" bgRepeat="no-repeat" height="23.75rem" w="100%" borderRadius="0.625rem" />
             </FadeInWhenVisible>
           </SimpleGrid>
-          <CustomButton>See All</CustomButton>
+          <CustomButton onClick={redirectToPortfolio}>See All</CustomButton>
         </VStack>
       </Section>
 
