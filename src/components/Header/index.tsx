@@ -1,4 +1,5 @@
-import { Flex, HStack, Image } from '@chakra-ui/react';
+import { Flex, HStack } from '@chakra-ui/react';
+import { Logo } from '../Logo';
 import { NavBar } from './NavBar';
 
 export function Header() {
@@ -19,7 +20,7 @@ export function Header() {
                 my="0"
                 maxWidth={1480}
             >
-                <Image w={["9.9375rem", "11.375rem", "12.8125rem"]} src="/logo-full.svg" alt="wilsonfranca.dev" />
+                <Logo />
 
                 <Flex as="div" align="center" style={{ marginLeft: "auto" }}>
                     <NavBar />
