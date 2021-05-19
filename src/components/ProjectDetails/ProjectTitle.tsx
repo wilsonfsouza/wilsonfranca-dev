@@ -7,6 +7,6 @@ interface ProjectTitleProps {
 
 export function ProjectTitle({ children }: ProjectTitleProps) {
     return (
-        <Text fontWeight="medium" fontSize="2.25rem">{children}</Text>
+        <Text fontWeight="medium" fontSize={["1.125rem", "1.6875rem", "2.25rem"]}>{children}</Text>
     );
 }
