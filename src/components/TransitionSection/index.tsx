@@ -21,7 +21,7 @@ export function TransitionSection({ gradientDirection, isBellowHero = false }: T
             <Box
                 h={["4.875rem", "7.875rem", "10.875rem"]}
                 w="100%"
-                background="linear-gradient(180deg, rgba(17, 14, 17, 0.55) 11.98%, rgba(34, 30, 38, 0) 100%)"
+                background="linear-gradient(180deg, #110E11 11.98%, rgba(34, 30, 38, 0) 100%)"
                 transform={`rotate(180deg)`}
             />
         );
