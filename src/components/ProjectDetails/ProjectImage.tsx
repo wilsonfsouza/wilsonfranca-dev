@@ -16,7 +16,7 @@ export function ProjectImage({ layoutId, imageSrc }: ProjectImageProps) {
             backgroundSize='cover'
             backgroundRepeat='no-repeat'
             width='100%'
-            height='30rem'
+            height={['15rem', '20rem', '30rem']}
             borderRadius='0.625rem'
         />
     );
