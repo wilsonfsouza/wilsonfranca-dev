@@ -1,4 +1,4 @@
-import { VStack, HStack } from "@chakra-ui/react";
+import { VStack, HStack, useBreakpointValue } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
 import { CustomButton } from "../../components/CustomButton";
@@ -11,6 +11,11 @@ import { TransitionSection } from "../../components/TransitionSection";
 export default function Smartit() {
     const router = useRouter();
 
+    const isMobile = useBreakpointValue({
+        base: true,
+        lg: false
+    });
+
     const handleBack = useCallback(() => {
         router.back();
     }, [router]);
@@ -20,7 +25,7 @@ export default function Smartit() {
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
             <FadeInWhenVisible>
                 <Section title="Smart.it" hasBackButton={true} goBack={handleBack}>
-                    <VStack spacing="6.375rem">
+                    <VStack spacing={["3.375rem", "4.875rem", "6.375rem"]}>
                         <VStack spacing="2rem" alignItems="flex-start">
                             <ProjectImage layoutId="smartit" imageSrc="/projects/smartit.png" />
 
@@ -33,10 +38,18 @@ export default function Smartit() {
                                 Keep up with your productivity without sacrificing your health. Smart.it is the dream application of chiropractors and eye doctors for their patients.
                             </ProjectDetails>
                         </VStack>
-                        <HStack spacing="1.5rem" alignSelf="center">
-                            <CustomButton>Live</CustomButton>
-                            <CustomButton isPrimary={false}>Code</CustomButton>
-                        </HStack>
+                        {isMobile ? (
+                            <VStack spacing="1.5rem" alignSelf="center">
+                                <CustomButton>Live</CustomButton>
+                                <CustomButton isPrimary={false}>Code</CustomButton>
+                            </VStack>
+                        ) : (
+                            <HStack spacing="1.5rem" alignSelf="center">
+                                <CustomButton>Live</CustomButton>
+                                <CustomButton isPrimary={false}>Code</CustomButton>
+                            </HStack>
+                        )}
+
                     </VStack>
                 </Section>
             </FadeInWhenVisible>
