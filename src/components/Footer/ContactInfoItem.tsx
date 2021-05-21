@@ -5,14 +5,13 @@ import { IconBaseProps } from "react-icons";
 
 interface ContactInfoItemProps {
     icon: React.ComponentType<IconBaseProps>;
-    direction?: 'row' | 'column';
     children: ReactNode;
 }
 
-export function ContactInfoItem({ children, icon: CustomIcon, direction = 'row' }: ContactInfoItemProps) {
+export function ContactInfoItem({ children, icon: CustomIcon }: ContactInfoItemProps) {
     return (
-        <Stack direction={direction} alignItems="center" justifyContent="center" spacing="1.5rem">
-            <Icon as={CustomIcon} fontSize="1.875rem" />
+        <Stack direction={{ base: "column", lg: "row" }} alignItems="center" justifyContent="center" spacing="1.5rem">
+            <Icon as={CustomIcon} fontSize={{ base: "1.5rem", lg: "1.875rem" }} />
             <VStack alignItems="start" spacing="0">
                 {children}
             </VStack>
