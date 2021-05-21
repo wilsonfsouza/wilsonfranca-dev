@@ -7,6 +7,6 @@ interface ProjectContentProps {
 
 export function ProjectContent({ children }: ProjectContentProps) {
     return (
-        <Heading fontWeight="light" fontSize={["1rem", "1.375rem", "1.75rem"]}>{children}</Heading>
+        <Heading fontWeight="light" fontSize={{ base: "1rem", sm: "1.375rem", md: "1.75rem" }}>{children}</Heading>
     );
 }
