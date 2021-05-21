@@ -8,7 +8,6 @@ export function Footer() {
         <Flex
             as="footer"
             w="100%"
-            h="34rem"
             align="center"
             backgroundColor="gray.900"
             px="2.6875rem"
