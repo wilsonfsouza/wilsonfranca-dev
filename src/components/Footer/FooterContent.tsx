@@ -11,10 +11,10 @@ export function FooterContent() {
 
     if (isSmallerScreen) {
         return (
-            <Flex alignItems="center" justifyContent="center">
+            <Flex alignItems="center" justifyContent="center" pb="4rem">
                 <Stack direction="column" alignItems="start" justifyContent="center" spacing="2.25rem" width="100%">
                     <CallToTalk />
-                    <Stack direction="row" alignItems="start" justifyContent="space-evenly" spacing="2.25rem" width="100%">
+                    <Stack direction="row" alignItems="start" justifyContent="space-between" spacing="2.25rem" width="100%">
                         <FooterNavList />
                         <ContactInfoList />
                     </Stack>
