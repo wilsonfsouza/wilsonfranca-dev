@@ -3,6 +3,7 @@ import { FaPhone, FaMailBulk } from 'react-icons/fa';
 import { SocialMediaBar } from '../SocialMediaBar';
 import { CallToTalk } from './CallToTalk';
 import { ContactInfoItem } from './ContactInfoItem';
+import { FooterContent } from './FooterContent';
 import { FooterNavList } from './FooterNavList';
 import { LogoDivider } from './LogoDivider';
 
@@ -26,19 +27,7 @@ export function Footer() {
             >
                 <LogoDivider />
 
-                <HStack alignItems="start" justifyContent="center" spacing={{ base: "2.5rem", lg: "5rem" }} width="100%">
-                    <CallToTalk />
-                    <FooterNavList />
-                    <VStack alignItems="flex-start" spacing="1.5rem">
-                        <ContactInfoItem icon={FaPhone}>
-                            <Text fontFamily="Roboto Slab" fontSize={{ base: "0.875rem", lg: "1.125rem" }} fontWeight="light">+1 (530) 782-0830</Text>
-                        </ContactInfoItem>
-                        <ContactInfoItem icon={FaMailBulk}>
-                            <Text fontFamily="Roboto Slab" fontSize={{ base: "0.875rem", lg: "1.125rem" }} fontWeight="bold">wilson.franca.92</Text>
-                            <Text fontFamily="Roboto Slab" fontSize={{ base: "0.875rem", lg: "1.125rem" }} fontWeight="light">@gmail.com</Text>
-                        </ContactInfoItem>
-                    </VStack>
-                </HStack>
+                <FooterContent />
 
                 <SocialMediaBar justifyContent="space-between">
                     <Text fontWeight="light" fontSize={{ base: "0.875rem", lg: "1rem" }}>Copyright © 2021 - Wilson Franca de Souza</Text>
