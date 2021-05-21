@@ -26,7 +26,7 @@ export default function Home() {
           w="100%"
           spacing="2.125rem"
           alignItems="center"
-          justifyContent="space-evenly"
+          justifyContent="center"
         >
           <WrapItem>
             <FadeInWhenVisible>
