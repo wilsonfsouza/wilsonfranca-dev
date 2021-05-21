@@ -25,6 +25,7 @@ export default function Home() {
         <Wrap
           w="100%"
           spacing="2.125rem"
+          display="flex"
           alignItems="center"
           justifyContent="center"
         >
