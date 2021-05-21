@@ -1,4 +1,4 @@
-import { Image } from "@chakra-ui/image";
+import { Image } from "@chakra-ui/react";
 
 interface LogoProps {
     isClickable?: boolean;

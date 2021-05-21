@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from "@chakra-ui/button";
+import { Button, ButtonProps } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 interface CustomButtonProps extends ButtonProps {

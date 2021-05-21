@@ -1,8 +1,6 @@
-import { Flex, Heading, VStack, Text, Box, HStack, Divider } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Flex, Heading, VStack, Text, Box, Divider } from '@chakra-ui/react';
 import { FadeInWhenVisible } from '../FadeInWhenVisible';
 import { CustomButton } from '../CustomButton';
-import { ExternalLink } from '../ExternalLink';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { SocialMediaBar } from '../SocialMediaBar';

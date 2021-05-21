@@ -1,5 +1,4 @@
-import Icon from "@chakra-ui/icon";
-import { Stack, VStack } from "@chakra-ui/layout";
+import { Stack, VStack, Icon } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { IconBaseProps } from "react-icons";
 

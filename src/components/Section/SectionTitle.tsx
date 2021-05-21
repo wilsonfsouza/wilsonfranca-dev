@@ -1,4 +1,4 @@
-import { Heading } from "@chakra-ui/layout";
+import { Heading } from "@chakra-ui/react";
 
 interface SectionTitleProps {
     content: string;

@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/layout';
+import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import NextLink from 'next/link';
 

@@ -1,4 +1,4 @@
-import { Link, LinkProps } from "@chakra-ui/layout";
+import { Link, LinkProps } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 interface ExternalLinkProps extends LinkProps {
