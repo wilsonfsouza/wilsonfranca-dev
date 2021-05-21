@@ -54,16 +54,16 @@ export function Hero() {
                         <VStack
                             spacing="10"
                             m="auto 0"
-                            alignItems={["center", "start"]}
-                            textAlign={["center", "left"]}
+                            alignItems={{ base: "center", md: "start" }}
+                            textAlign={{ base: "center", md: "left" }}
                         >
                             <VStack
                                 spacing="2"
                                 m="auto 0"
-                                alignItems={["center", "start"]}
-                                textAlign={["center", "left"]}
+                                alignItems={{ base: "center", md: "start" }}
+                                textAlign={{ base: "center", md: "left" }}
                             >
-                                <Heading fontWeight="bold" fontSize={["2.5rem", "3rem", "4.5rem"]}>
+                                <Heading fontWeight="bold" fontSize={{ base: "2.5rem", sm: "3rem", md: "4.5rem" }}>
                                     Think<Box as="span" color="pink.600">. </Box>
                                     Plan<Box as="span" color="pink.600">. </Box>
                                     Innovate<Box as="span" color="pink.600">.</Box>
@@ -71,8 +71,8 @@ export function Hero() {
 
                                 <Text
                                     fontWeight="light"
-                                    fontSize={["1.25rem", "1.75rem", "2.25rem"]}
-                                    maxWidth={["15.875rem", "24.875rem", "31.875rem"]}
+                                    fontSize={{ base: "1.25rem", sm: "1.75rem", md: "2.25rem" }}
+                                    maxWidth={{ base: "15.875rem", sm: "24.875rem", md: "31.875rem" }}
                                 >
                                     I’m a Sofware Developer and UI/UX enthusiast
                                 </Text>
