@@ -19,7 +19,7 @@ export function ProjectCard({ href, imgSrc, layoutId }: ProjectCardProps) {
                 backgroundSize='cover'
                 backgroundRepeat='no-repeat'
                 width='100%'
-                height='23.75rem'
+                height={{ base: '10.75rem', sm: '23.75rem' }}
                 borderRadius='0.625rem'
                 cursor={'pointer'}
             />
