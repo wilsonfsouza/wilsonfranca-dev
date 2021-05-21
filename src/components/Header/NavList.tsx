@@ -11,7 +11,7 @@ export function NavList({ direction = "row", ...rest }: NavListProps) {
     return (
         <Stack
             as="nav"
-            spacing={["2", "2", "2", "8"]}
+            spacing={{ base: "2", lg: "8" }}
             direction={direction}
             {...rest}
         >
