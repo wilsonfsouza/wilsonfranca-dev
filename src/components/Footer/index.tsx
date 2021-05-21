@@ -23,7 +23,7 @@ export function Footer() {
                 <LogoDivider />
                 <FooterContent />
 
-                <SocialMediaBar justifyContent="space-between">
+                <SocialMediaBar justifyContent="space-between" pb="0">
                     <Text fontWeight="light" fontSize={{ base: "0.875rem", lg: "1rem" }}>Copyright © 2021 - Wilson Franca de Souza</Text>
                 </SocialMediaBar>
             </VStack>
