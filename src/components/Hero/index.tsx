@@ -5,6 +5,7 @@ import { CustomButton } from '../CustomButton';
 import { ExternalLink } from '../ExternalLink';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
+import { SocialMediaBar } from '../SocialMediaBar';
 
 export function Hero() {
     const router = useRouter();
@@ -80,17 +81,9 @@ export function Hero() {
                             <CustomButton onClick={redirectToPortfolio}>Check My Projects</CustomButton>
                         </VStack>
 
-                        <HStack spacing={["1.5rem", "2.8125rem"]} w="100%" alignItems="center" justifyContent="center" pb="3.625rem">
+                        <SocialMediaBar>
                             <Divider orientation="horizontal" height="2px" minWidth="10px" flex="1" color="gray.500" />
-
-                            <ExternalLink href="https://github.com/wilsonfsouza">
-                                <FaGithub fontSize={36} />
-                            </ExternalLink>
-
-                            <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
-                                <FaLinkedin fontSize={36} />
-                            </ExternalLink>
-                        </HStack>
+                        </SocialMediaBar>
                     </VStack>
                 </FadeInWhenVisible>
             </Flex>
