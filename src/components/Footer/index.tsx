@@ -1,10 +1,6 @@
-import { Flex, VStack, HStack, Text } from '@chakra-ui/react';
-import { FaPhone, FaMailBulk } from 'react-icons/fa';
+import { Flex, VStack, Text } from '@chakra-ui/react';
 import { SocialMediaBar } from '../SocialMediaBar';
-import { CallToTalk } from './CallToTalk';
-import { ContactInfoItem } from './ContactInfoItem';
 import { FooterContent } from './FooterContent';
-import { FooterNavList } from './FooterNavList';
 import { LogoDivider } from './LogoDivider';
 
 export function Footer() {
@@ -26,7 +22,6 @@ export function Footer() {
                 maxWidth={1480}
             >
                 <LogoDivider />
-
                 <FooterContent />
 
                 <SocialMediaBar justifyContent="space-between">
