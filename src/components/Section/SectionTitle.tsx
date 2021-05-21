@@ -7,7 +7,7 @@ interface SectionTitleProps {
 export function SectionTitle({ content }: SectionTitleProps) {
     return (
         <Heading
-            fontSize={["2rem", "3rem", "4rem"]}
+            fontSize={{ base: "2rem", sm: "3rem", md: "4rem" }}
             position="relative"
             height="fit-content"
             _after={{
