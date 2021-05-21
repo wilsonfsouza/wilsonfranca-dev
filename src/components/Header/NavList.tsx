@@ -1,18 +1,19 @@
-import { Stack } from '@chakra-ui/react';
+import { Stack, StackProps } from '@chakra-ui/react';
 
 import { ActiveLink } from './ActiveLink';
 import { NavLink } from './NavLink';
 
-interface NavListProps {
+interface NavListProps extends StackProps {
     direction?: "row" | "column";
 }
 
-export function NavList({ direction = "row" }: NavListProps) {
+export function NavList({ direction = "row", ...rest }: NavListProps) {
     return (
         <Stack
             as="nav"
             spacing={["2", "2", "2", "8"]}
             direction={direction}
+            {...rest}
         >
             <ActiveLink href="/" activeClassName="active">
                 <NavLink>HOME</NavLink>
