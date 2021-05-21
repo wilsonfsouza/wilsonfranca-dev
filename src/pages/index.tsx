@@ -66,13 +66,13 @@ export default function Home() {
               <ProjectCard href="/projects/smartit" imgSrc="/projects/smartit.png" layoutId="smartit" />
             </FadeInWhenVisible>
             <FadeInWhenVisible>
-              <Box bg="url('/projects/gobarber.png')" bgPosition="bottom" bgSize="cover" bgRepeat="no-repeat" height="23.75rem" w="100%" borderRadius="0.625rem" />
+              <ProjectCard href="/projects/gobarber" imgSrc="/projects/gobarber.png" layoutId="gobarber" />
             </FadeInWhenVisible>
             <FadeInWhenVisible>
-              <Box bg="url('/projects/digiWallet.png')" bgPosition="bottom" bgSize="cover" bgRepeat="no-repeat" height="23.75rem" w="100%" borderRadius="0.625rem" />
+              <ProjectCard href="/projects/digiWallet" imgSrc="/projects/digiWallet.png" layoutId="digiWallet" />
             </FadeInWhenVisible>
             <FadeInWhenVisible>
-              <Box bg="url('/projects/gobarber.png')" bgPosition="bottom" bgSize="cover" bgRepeat="no-repeat" height="23.75rem" w="100%" borderRadius="0.625rem" />
+              <ProjectCard href="/projects/gobarber" imgSrc="/projects/gobarber.png" layoutId="gobarber" />
             </FadeInWhenVisible>
           </SimpleGrid>
           <CustomButton onClick={redirectToPortfolio}>See All</CustomButton>
