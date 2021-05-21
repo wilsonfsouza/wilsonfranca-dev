@@ -29,13 +29,13 @@ export function Section({ title, children, hasBackButton = false, goBack, ...res
                 <HStack justifyContent="space-between" alignItems="center">
                     <SectionTitle content={title} />
                     {hasBackButton && (
-                        <Button variant="unstyled" fontFamily="Roboto Slab" fontSize={["1rem", "1.375rem", "1.75rem"]} fontWeight="light" _hover={{ textDecoration: 'underline', color: 'pink.600' }} onClick={goBack}>Back</Button>
+                        <Button variant="unstyled" fontFamily="Roboto Slab" fontSize={{ base: "1rem", sm: "1.375rem", md: "1.75rem" }} fontWeight="light" _hover={{ textDecoration: 'underline', color: 'pink.600' }} onClick={goBack}>Back</Button>
                     )}
                 </HStack>
                 <Flex
                     as="div"
-                    marginTop={["3.125rem", "4.75rem", "6.375rem"]}
-                    marginBottom={["4.625rem", "7.625rem", "10.625rem"]}
+                    marginTop={{ base: "3.125rem", sm: "4.75rem", md: "6.375rem" }}
+                    marginBottom={{ base: "4.625rem", sm: "7.625rem", md: "10.625rem" }}
                 >
                     {children}
                 </Flex>
