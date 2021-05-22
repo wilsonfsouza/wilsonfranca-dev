@@ -63,16 +63,16 @@ export default function Home() {
         <VStack spacing="3rem" w="100%">
           <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="2rem" w="100%">
             <FadeInWhenVisible>
-              <ProjectCard href="/projects/smartit" imgSrc="/projects/smartit.png" layoutId="smartit" />
+              <ProjectCard href="/portfolio/smartit" imgSrc="/portfolio/smartit.png" layoutId="smartit" />
             </FadeInWhenVisible>
             <FadeInWhenVisible>
-              <ProjectCard href="/projects/gobarber" imgSrc="/projects/gobarber.png" layoutId="gobarber" />
+              <ProjectCard href="/portfolio/gobarber" imgSrc="/portfolio/gobarber.png" layoutId="gobarber" />
             </FadeInWhenVisible>
             <FadeInWhenVisible>
-              <ProjectCard href="/projects/digiWallet" imgSrc="/projects/digiWallet.png" layoutId="digiWallet" />
+              <ProjectCard href="/portfolio/digiWallet" imgSrc="/portfolio/digiWallet.png" layoutId="digiWallet" />
             </FadeInWhenVisible>
             <FadeInWhenVisible>
-              <ProjectCard href="/projects/gobarber" imgSrc="/projects/gobarber.png" layoutId="gobarber" />
+              <ProjectCard href="/portfolio/gobarber" imgSrc="/portfolio/gobarber.png" layoutId="gobarber" />
             </FadeInWhenVisible>
           </SimpleGrid>
           <CustomButton onClick={redirectToPortfolio}>See All</CustomButton>
