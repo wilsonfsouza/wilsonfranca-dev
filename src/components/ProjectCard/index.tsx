@@ -26,6 +26,10 @@ export function ProjectCard({ href, imgSrc, layoutId }: ProjectCardProps) {
                 _hover={{
                     transform: 'scale(1.035)'
                 }}
+                _focus={{
+                    transform: 'scale(1.035)'
+                }}
+                tabIndex={0}
             />
         </NextLink>
     );
