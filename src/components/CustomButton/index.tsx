@@ -11,7 +11,7 @@ export function CustomButton({ children, isPrimary = true, ...rest }: CustomButt
         return (
             <Button
                 variant="unstyled"
-                bg="#999591"
+                bg="#99959185"
                 _hover={{ filter: 'brightness(0.95)' }}
                 w={{ base: "12.5rem", lg: "15.625rem" }}
                 h="3.125rem"
