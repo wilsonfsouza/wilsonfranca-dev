@@ -13,11 +13,11 @@ export function SocialMediaBar({ children, ...rest }: SocialMediaBarProps) {
             {children}
             <HStack spacing="1.5rem" alignItems="center" justifyContent="space-between">
                 <ExternalLink href="https://github.com/wilsonfsouza">
-                    <Icon as={FaGithub} fontSize="2.25rem" />
+                    <Icon as={FaGithub} fontSize="2.25rem" title="Github" />
                 </ExternalLink>
 
                 <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
-                    <Icon as={FaLinkedin} fontSize="2.25rem" />
+                    <Icon as={FaLinkedin} fontSize="2.25rem" title="Linkedin" />
                 </ExternalLink>
             </HStack>
         </Stack>
