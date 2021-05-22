@@ -1,5 +1,5 @@
-import { VStack, HStack, useBreakpointValue } from "@chakra-ui/react";
-import { GetStaticProps } from "next";
+import { VStack, Stack } from "@chakra-ui/react";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
 import { CustomButton } from "../../components/CustomButton";
@@ -23,11 +23,6 @@ interface ProjectPreviewProps {
 export default function ProjectPreview({ project }: ProjectPreviewProps) {
     const router = useRouter();
 
-    const isMobile = useBreakpointValue({
-        base: true,
-        lg: false
-    });
-
     const handleBack = useCallback(() => {
         router.back();
     }, [router]);
@@ -49,18 +44,11 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
                                 {project.description}
                             </ProjectDetails>
                         </VStack>
-                        {isMobile ? (
-                            <VStack spacing="1.5rem" alignSelf="center">
-                                <CustomButton>Live</CustomButton>
-                                <CustomButton isPrimary={false}>Code</CustomButton>
-                            </VStack>
-                        ) : (
-                            <HStack spacing="1.5rem" alignSelf="center">
-                                <CustomButton>Live</CustomButton>
-                                <CustomButton isPrimary={false}>Code</CustomButton>
-                            </HStack>
-                        )}
 
+                        <Stack direction={{ base: "column", lg: "row" }} spacing="1.5rem" alignSelf="center">
+                            <CustomButton>Live</CustomButton>
+                            <CustomButton isPrimary={false}>Code</CustomButton>
+                        </Stack>
                     </VStack>
                 </Section>
             </FadeInWhenVisible>
@@ -69,16 +57,25 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
     )
 }
 
+export const getStaticPaths: GetStaticPaths = async () => {
+    return {
+        paths: [],
+        fallback: 'blocking',
+    }
+}
+
 const ONE_DAY = 60 * 60 * 24;
 
-export const getStaticSiteProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { slug } = params;
+
+    console.log(slug);
 
     const project = {
         slug,
         title: "Smart.it",
         technologies: "Next.js, Styled-components, TypeScript.",
-        description: "Smart.it is a web application that combines a gamified experience of the pomodoro technique with healthy exercises between short breaks of work/study sessions.<br />Keep up with your productivity without sacrificing your health. Smart.it is the dream application of chiropractors and eye doctors for their patients."
+        description: "Smart.it is a web application that combines a gamified experience of the pomodoro technique with healthy exercises between short breaks of work/study sessions. Keep up with your productivity without sacrificing your health. Smart.it is the dream application of chiropractors and eye doctors for their patients."
     }
 
     return {
