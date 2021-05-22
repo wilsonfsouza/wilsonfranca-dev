@@ -22,6 +22,10 @@ export function ProjectCard({ href, imgSrc, layoutId }: ProjectCardProps) {
                 height={{ base: '10.75rem', sm: '23.75rem' }}
                 borderRadius='0.625rem'
                 cursor={'pointer'}
+                transition="transform .2s"
+                _hover={{
+                    transform: 'scale(1.035)'
+                }}
             />
         </NextLink>
     );
