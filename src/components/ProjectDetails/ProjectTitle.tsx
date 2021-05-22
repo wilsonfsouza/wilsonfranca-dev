@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 interface ProjectTitleProps {
@@ -7,6 +7,6 @@ interface ProjectTitleProps {
 
 export function ProjectTitle({ children }: ProjectTitleProps) {
     return (
-        <Text fontWeight="medium" fontSize={{ base: "1.125rem", sm: "1.6875rem", md: "2.25rem" }}>{children}</Text>
+        <Heading fontWeight="medium" fontSize={{ base: "1.125rem", sm: "1.6875rem", md: "2.25rem" }}>{children}</Heading>
     );
 }
