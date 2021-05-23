@@ -6,7 +6,7 @@ export function ContactInfoList() {
     return (
         <VStack alignItems="flex-start" spacing="1.5rem">
             <ContactInfoItem icon={IoMdPhonePortrait}>
-                <Text fontFamily="Roboto Slab" fontSize={{ base: "0.875rem", lg: "1.125rem" }} fontWeight="light">+1 (530) 782-0830</Text>
+                <Text fontFamily="Roboto Slab" fontSize={{ base: "0.875rem", lg: "1.125rem" }} fontWeight="light">+1 (530) 782-6830</Text>
             </ContactInfoItem>
             <ContactInfoItem icon={IoIosMail}>
                 <Text fontFamily="Roboto Slab" fontSize={{ base: "0.875rem", lg: "1.125rem" }} fontWeight="bold">wilson.franca.92</Text>
