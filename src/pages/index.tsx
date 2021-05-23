@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { SimpleGrid, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 import { FaCode, FaChartBar, FaUserAstronaut } from 'react-icons/fa';
 import { Hero } from "../components/Hero";
 import { TransitionSection } from "../components/TransitionSection";
