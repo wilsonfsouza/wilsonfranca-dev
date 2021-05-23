@@ -21,8 +21,8 @@ export function NavList({ direction = "row", ...rest }: NavListProps) {
             <ActiveLink href="/whoiam" activeClassName="active">
                 <NavLink>WHO I AM</NavLink>
             </ActiveLink>
-            <ActiveLink href="/portfolio" activeClassName="active">
-                <NavLink>PORTFOLIO</NavLink>
+            <ActiveLink href="/projects" activeClassName="active">
+                <NavLink>PROJECTS</NavLink>
             </ActiveLink>
             <ActiveLink href="/contact" activeClassName="active">
                 <NavLink>CONTACT</NavLink>
