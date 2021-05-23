@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { useCallback } from "react";
 import { getPrismicClient } from "../services/prismic";
 import Prismic from '@prismicio/client';
-import { RichText } from 'prismic-dom';
 
 import { Hero } from "../components/Hero";
 import { TransitionSection } from "../components/TransitionSection";
