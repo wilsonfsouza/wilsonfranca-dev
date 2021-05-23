@@ -43,7 +43,7 @@ export default function Home() {
               <Card
                 icon={FaChartBar}
                 title="Data Analysis"
-                description="Modern experiences optimized for performance, search engines, and converting users to customers."
+                description="Explore your data with automated processes and display it to your end-user to tell your story."
               />
             </FadeInWhenVisible>
           </WrapItem>
