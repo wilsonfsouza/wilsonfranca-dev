@@ -12,11 +12,11 @@ export function ProjectImage({ layoutId, imageSrc }: ProjectImageProps) {
             as={motion.div}
             layoutId={layoutId}
             backgroundImage={`url(${imageSrc})`}
-            backgroundPosition='center'
+            backgroundPosition='bottom'
             backgroundSize='cover'
             backgroundRepeat='no-repeat'
             width='100%'
-            height={{ base: '15rem', sm: '20rem', md: '30rem' }}
+            height={{ base: '15rem', sm: '20rem', md: '30rem', lg: '40rem' }}
             borderRadius='0.625rem'
         />
     );
