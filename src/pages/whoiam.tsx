@@ -1,4 +1,4 @@
-import { VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 
 import { TransitionSection } from "../components/TransitionSection";
 import { Section } from "../components/Section";
@@ -7,7 +7,8 @@ import { MiniCard } from "../components/MiniCard";
 import { skills } from "../utils/skills";
 import { Paragraph } from "../components/Paragraph";
 import { GetStaticProps } from "next";
-
+import { CustomButton } from "../components/CustomButton";
+import { ExternalLink } from "../components/ExternalLink";
 
 export default function WhoIAm() {
   return (
@@ -26,6 +27,9 @@ export default function WhoIAm() {
             <Paragraph>
               During the day, I am a Full-Stack Developer at the Spatial Studies Lab at Rice University. During the evenings, I spend time working on personal projects and volunteering at local non-profits.
           </Paragraph>
+            <ExternalLink href="/Software-Developer_Wilson_Franca_de_Souza.pdf">
+              <CustomButton>See Resume</CustomButton>
+            </ExternalLink>
           </VStack>
         </Section>
       </FadeInWhenVisible>
