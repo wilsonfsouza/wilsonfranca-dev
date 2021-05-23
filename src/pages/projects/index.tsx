@@ -4,6 +4,7 @@ import { Section } from "../../components/Section";
 import { CustomButton } from "../../components/CustomButton";
 import { ProjectCard } from "../../components/ProjectCard";
 import { FadeInWhenVisible } from "../../components/FadeInWhenVisible";
+import { GetStaticProps } from "next";
 
 export default function Home() {
     return (
@@ -33,4 +34,13 @@ export default function Home() {
             <TransitionSection gradientDirection="upsidedown" />
         </>
     )
+}
+
+const ONE_DAY = 60 * 60 * 24;
+
+export const getStaticProps: GetStaticProps = async () => {
+    return {
+        props: {},
+        revalidate: ONE_DAY
+    }
 }
