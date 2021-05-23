@@ -6,7 +6,7 @@ import { ProjectCard } from "../../components/ProjectCard";
 import { FadeInWhenVisible } from "../../components/FadeInWhenVisible";
 import { GetStaticProps } from "next";
 
-export default function Home() {
+export default function Projects() {
     return (
         <>
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
