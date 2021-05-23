@@ -2,18 +2,25 @@ import { VStack, Stack } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
+import { getPrismicClient } from "../../services/prismic";
+import { RichText } from 'prismic-dom';
+
 import { CustomButton } from "../../components/CustomButton";
 import { FadeInWhenVisible } from "../../components/FadeInWhenVisible";
 import { ProjectDetails } from "../../components/ProjectDetails";
 import { ProjectImage } from "../../components/ProjectDetails/ProjectImage";
 import { Section } from "../../components/Section";
 import { TransitionSection } from "../../components/TransitionSection";
+import { ExternalLink } from "../../components/ExternalLink";
 
 type Project = {
     slug: string;
     title: string;
+    thumbnailUrl: string;
     technologies: string;
     description: string;
+    websiteUrl: string;
+    githubRepository: string;
 }
 
 interface ProjectPreviewProps {
@@ -34,7 +41,7 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
                 <Section title={project.title} hasBackButton={true} goBack={handleBack}>
                     <VStack spacing={["3.375rem", "4.875rem", "6.375rem"]}>
                         <VStack spacing="2rem" alignItems="flex-start">
-                            <ProjectImage layoutId={project.slug} imageSrc={`/projects/${project.slug}.png`} />
+                            <ProjectImage layoutId={project.slug} imageSrc={project.thumbnailUrl} />
 
                             <ProjectDetails title="Technologies:">
                                 {project.technologies}
@@ -46,8 +53,14 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
                         </VStack>
 
                         <Stack direction={{ base: "column", lg: "row" }} spacing="1.5rem" alignSelf="center">
-                            <CustomButton>Live</CustomButton>
-                            <CustomButton isPrimary={false}>Code</CustomButton>
+                            {project.websiteUrl && (
+                                <ExternalLink href={project.websiteUrl}>
+                                    <CustomButton>Live</CustomButton>
+                                </ExternalLink>
+                            )}
+                            <ExternalLink href={project.githubRepository}>
+                                <CustomButton isPrimary={false}>Code</CustomButton>
+                            </ExternalLink>
                         </Stack>
                     </VStack>
                 </Section>
@@ -69,13 +82,26 @@ const ONE_DAY = 60 * 60 * 24;
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { slug } = params;
 
-    console.log(slug);
+    const prismic = getPrismicClient();
+
+    const response = await prismic.getByUID('project', String(slug), {});
+
+    if (!response) {
+        return {
+            props: {
+                project: {}
+            }
+        }
+    }
 
     const project = {
         slug,
-        title: "Smart.it",
-        technologies: "Next.js, Styled-components, TypeScript.",
-        description: "Smart.it is a web application that combines a gamified experience of the pomodoro technique with healthy exercises between short breaks of work/study sessions. Keep up with your productivity without sacrificing your health. Smart.it is the dream application of chiropractors and eye doctors for their patients."
+        title: RichText.asText(response.data.title),
+        thumbnailUrl: response.data.thumbnail.url,
+        technologies: RichText.asText(response.data.technologies),
+        description: RichText.asText(response.data.description),
+        websiteUrl: response.data.website_url.url,
+        githubRepository: response.data.github_repository.url
     }
 
     return {
