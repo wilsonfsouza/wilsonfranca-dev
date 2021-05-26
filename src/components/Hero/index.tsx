@@ -33,7 +33,7 @@ export function Hero() {
                 right: "0",
                 bottom: "0",
                 left: "0",
-                backgroundImage: 'linear-gradient(180deg, #110E11 0%, rgba(34, 30, 38, 0) 100%)',
+                background: 'linear-gradient(180deg, #110E11 0%, rgba(34, 30, 38, 0) 100%)',
             }}
         >
             <Flex
