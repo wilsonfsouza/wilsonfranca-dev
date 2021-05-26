@@ -12,6 +12,7 @@ import { ProjectImage } from "../../components/ProjectDetails/ProjectImage";
 import { Section } from "../../components/Section";
 import { TransitionSection } from "../../components/TransitionSection";
 import { ExternalLink } from "../../components/ExternalLink";
+import { SEO } from "../../components/SEO";
 
 type Project = {
     slug: string;
@@ -36,6 +37,7 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
 
     return (
         <>
+            <SEO title={project.title} />
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
             <FadeInWhenVisible>
                 <Section title={project.title} hasBackButton={true} goBack={handleBack}>

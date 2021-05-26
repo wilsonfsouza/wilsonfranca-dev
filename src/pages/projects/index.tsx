@@ -8,6 +8,7 @@ import { Section } from "../../components/Section";
 import { CustomButton } from "../../components/CustomButton";
 import { ProjectCard } from "../../components/ProjectCard";
 import { FadeInWhenVisible } from "../../components/FadeInWhenVisible";
+import { SEO } from "../../components/SEO";
 
 type Project = {
     slug: string;
@@ -21,6 +22,8 @@ interface ProjectsProps {
 export default function Projects({ projects }: ProjectsProps) {
     return (
         <>
+            <SEO title="Projects" />
+
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
 
             <Section title="Projects">
