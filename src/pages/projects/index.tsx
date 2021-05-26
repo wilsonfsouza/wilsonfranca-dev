@@ -1,12 +1,24 @@
 import { SimpleGrid, VStack } from "@chakra-ui/react";
+import { GetStaticProps } from "next";
+import { getPrismicClient } from "../../services/prismic";
+import Prismic from '@prismicio/client';
+
 import { TransitionSection } from "../../components/TransitionSection";
 import { Section } from "../../components/Section";
 import { CustomButton } from "../../components/CustomButton";
 import { ProjectCard } from "../../components/ProjectCard";
 import { FadeInWhenVisible } from "../../components/FadeInWhenVisible";
-import { GetStaticProps } from "next";
 
-export default function Projects() {
+type Project = {
+    slug: string;
+    thumbnailUrl: string;
+}
+
+interface ProjectsProps {
+    projects: Project[];
+}
+
+export default function Projects({ projects }: ProjectsProps) {
     return (
         <>
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
@@ -14,18 +26,11 @@ export default function Projects() {
             <Section title="Projects">
                 <VStack spacing="3rem" w="100%">
                     <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="2rem" w="100%">
-                        <FadeInWhenVisible>
-                            <ProjectCard href="/projects/smartit" imgSrc="/projects/smartit.png" layoutId="smartit" />
-                        </FadeInWhenVisible>
-                        <FadeInWhenVisible>
-                            <ProjectCard href="/projects/gobarber" imgSrc="/projects/gobarber.png" layoutId="gobarber" />
-                        </FadeInWhenVisible>
-                        <FadeInWhenVisible>
-                            <ProjectCard href="/projects/digiWallet" imgSrc="/projects/digiWallet.png" layoutId="digiWallet" />
-                        </FadeInWhenVisible>
-                        <FadeInWhenVisible>
-                            <ProjectCard href="/projects/gobarber" imgSrc="/projects/gobarber.png" layoutId="gobarber" />
-                        </FadeInWhenVisible>
+                        {projects.map(project => (
+                            <FadeInWhenVisible key={project.slug}>
+                                <ProjectCard href={`/projects/${project.slug}`} imgSrc={project.thumbnailUrl} layoutId={project.slug} />
+                            </FadeInWhenVisible>
+                        ))}
                     </SimpleGrid>
                     <CustomButton onClick={() => { }}>See more</CustomButton>
                 </VStack>
@@ -39,8 +44,37 @@ export default function Projects() {
 const ONE_DAY = 60 * 60 * 24;
 
 export const getStaticProps: GetStaticProps = async () => {
+    const prismic = getPrismicClient();
+
+    const response = await prismic.query([
+        Prismic.Predicates.at('document.type', 'project')
+    ], {
+        fetch: ['project.thumbnail'],
+        pageSize: 4,
+        orderings: '[document.first_publication_date]'
+    });
+
+
+    if (!response) {
+        return {
+            props: {
+                projects: []
+            },
+            revalidate: ONE_DAY
+        }
+    }
+
+    const projects = response.results.map(project => {
+        return {
+            slug: project.uid,
+            thumbnailUrl: project.data.thumbnail.url,
+        }
+    });
+
     return {
-        props: {},
+        props: {
+            projects
+        },
         revalidate: ONE_DAY
     }
 }
