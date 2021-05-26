@@ -1,4 +1,5 @@
-import { Image } from "@chakra-ui/react";
+import { useBreakpointValue } from "@chakra-ui/react";
+import NextImage from "next/image";
 
 interface LogoProps {
     isClickable?: boolean;
@@ -6,12 +7,29 @@ interface LogoProps {
 }
 
 export function Logo({ onClickFunct, isClickable = false }: LogoProps) {
+    const isMobile = useBreakpointValue({
+        base: true,
+        md: false
+    });
+
     if (isClickable) {
         return (
-            <Image h="auto" w={{ base: "9.9375rem", sm: "11.375rem", md: "12.8125rem" }} src="/logo-full.svg" fallbackSrc="/logo-full.svg" alt="wilfranca" onClick={onClickFunct} style={{ cursor: 'pointer' }} />
+            <>
+                {isMobile ? (
+                    <NextImage height={30} width={159} src="/logo-full.svg" alt="wilfranca" objectFit="contain" onClick={onClickFunct} css={{ cursor: 'pointer' }} />
+                ) : (
+                    <NextImage height={39} width={205} src="/logo-full.svg" alt="wilfranca" objectFit="contain" onClick={onClickFunct} css={{ cursor: 'pointer' }} />
+                )}
+            </>
         );
     }
     return (
-        <Image h="auto" w={{ base: "9.9375rem", sm: "11.375rem", md: "12.8125rem" }} src="/logo-full.svg" fallbackSrc="/logo-full.svg" alt="wilfranca" />
+        <>
+            {isMobile ? (
+                <NextImage height={30} width={159} src="/logo-full.svg" alt="wilfranca" objectFit="contain" />
+            ) : (
+                <NextImage height={39} width={205} src="/logo-full.svg" alt="wilfranca" objectFit="contain" />
+            )}
+        </>
     );
 }
