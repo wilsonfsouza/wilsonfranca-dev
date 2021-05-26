@@ -7,6 +7,7 @@ import { Section } from "../components/Section";
 import { FadeInWhenVisible } from "../components/FadeInWhenVisible";
 import { Paragraph } from "../components/Paragraph";
 import { ContactInfoItem } from "../components/Footer/ContactInfoItem";
+import { SEO } from "../components/SEO";
 
 export default function Contact() {
     const isMobile = useBreakpointValue({
@@ -16,6 +17,7 @@ export default function Contact() {
 
     return (
         <>
+            <SEO title="Contact" />
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
 
             <FadeInWhenVisible>
