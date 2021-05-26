@@ -35,7 +35,7 @@ export default function Projects({ projects }: ProjectsProps) {
                             </FadeInWhenVisible>
                         ))}
                     </SimpleGrid>
-                    <CustomButton onClick={() => { }}>See more</CustomButton>
+                    {/* <CustomButton onClick={() => { }}>See more</CustomButton> */}
                 </VStack>
             </Section>
 

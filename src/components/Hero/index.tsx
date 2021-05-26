@@ -8,8 +8,8 @@ import { SocialMediaBar } from '../SocialMediaBar';
 export function Hero() {
     const router = useRouter();
 
-    const redirectToPortfolio = useCallback(() => {
-        router.push('/portfolio');
+    const redirectToProjects = useCallback(() => {
+        router.push('/projects');
     }, [router]);
 
     return (
@@ -76,7 +76,7 @@ export function Hero() {
                                 </Text>
                             </VStack>
 
-                            <CustomButton onClick={redirectToPortfolio}>Check My Projects</CustomButton>
+                            <CustomButton onClick={redirectToProjects}>Check My Projects</CustomButton>
                         </VStack>
 
                         <SocialMediaBar>
