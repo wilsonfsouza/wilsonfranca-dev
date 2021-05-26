@@ -13,6 +13,7 @@ import { Card } from "../components/Card";
 import { CustomButton } from "../components/CustomButton";
 import { ProjectCard } from "../components/ProjectCard";
 import { FadeInWhenVisible } from "../components/FadeInWhenVisible";
+import { SEO } from "../components/SEO";
 
 type Project = {
   slug: string;
@@ -32,6 +33,7 @@ export default function Home({ projects }: HomeProps) {
 
   return (
     <>
+      <SEO title="Home" />
       <Hero />
       <TransitionSection gradientDirection="normal" isBellowHero={true} />
       <Section title="What I Do">
