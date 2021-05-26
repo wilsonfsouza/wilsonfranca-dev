@@ -109,7 +109,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       props: {
         projects: []
-      }
+      },
+      revalidate: ONE_DAY
     }
   }
 
