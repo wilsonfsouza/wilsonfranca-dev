@@ -20,8 +20,8 @@ export function SEO({ title }: SEOProps) {
             <meta property="og:site_name" content="wilfranca" />
             <meta property="og:title" content={`wilfranca | ${title}`} />
             <meta property="og:description" content="Wilson Franca de Souza - Software Developer and UI/UX enthusiast based in Redding, CA (US)." />
-            <meta property="og:image" content={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/thumb.svg`} />
-            <meta property="og:image:type" content="image/svg" />
+            <meta property="og:image" content={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/thumb.png`} />
+            <meta property="og:image:type" content="image/png" />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
 
@@ -30,7 +30,7 @@ export function SEO({ title }: SEOProps) {
             <meta property="twitter:url" content={process.env.NEXT_PUBLIC_WEBSITE_URL} />
             <meta property="twitter:title" content={`wilfranca | ${title}`} />
             <meta name="twitter:description" content="Wilson Franca de Souza - Software Developer and UI/UX enthusiast based in Redding, CA (US)." />
-            <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/thumb.svg`} />
+            <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/thumb.png`} />
             <meta name="twiiter:image:alt" content="Thumbnail" />
             <meta name="twitter:title" content="wilfranca" />
             <meta name="twiiter:create" content="wilsonfsouza" />
