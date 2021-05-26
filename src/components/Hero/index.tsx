@@ -3,6 +3,7 @@ import { CustomButton } from '../CustomButton';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { SocialMediaBar } from '../SocialMediaBar';
+import { FadeInWhenVisible } from '../FadeInWhenVisible';
 
 export function Hero() {
     const router = useRouter();
@@ -59,22 +60,25 @@ export function Hero() {
                             alignItems={{ base: "center", md: "start" }}
                             textAlign={{ base: "center", md: "left" }}
                         >
-                            <Heading fontWeight="bold" fontSize={{ base: "2.5rem", sm: "3rem", md: "4.5rem" }}>
-                                Think<Box as="span" color="pink.600">. </Box>
+                            <FadeInWhenVisible>
+                                <Heading fontWeight="bold" fontSize={{ base: "2.5rem", sm: "3rem", md: "4.5rem" }}>
+                                    Think<Box as="span" color="pink.600">. </Box>
                                     Plan<Box as="span" color="pink.600">. </Box>
                                     Innovate<Box as="span" color="pink.600">.</Box>
-                            </Heading>
-
-                            <Text
-                                fontWeight="light"
-                                fontSize={{ base: "1.25rem", sm: "1.75rem", md: "2.25rem" }}
-                                maxWidth={{ base: "15.875rem", sm: "24.875rem", md: "31.875rem" }}
-                            >
-                                I’m a Sofware Developer and UI/UX enthusiast
-                                </Text>
+                                </Heading>
+                            </FadeInWhenVisible>
+                            <FadeInWhenVisible>
+                                <Text
+                                    fontWeight="light"
+                                    fontSize={{ base: "1.25rem", sm: "1.75rem", md: "2.25rem" }}
+                                    maxWidth={{ base: "15.875rem", sm: "24.875rem", md: "31.875rem" }}
+                                >
+                                    I’m a Sofware Developer and UI/UX enthusiast
+                                </Text></FadeInWhenVisible>
                         </VStack>
-
-                        <CustomButton onClick={redirectToProjects}>See my projects</CustomButton>
+                        <FadeInWhenVisible>
+                            <CustomButton onClick={redirectToProjects}>See my projects</CustomButton>
+                        </FadeInWhenVisible>
                     </VStack>
 
                     <SocialMediaBar>
