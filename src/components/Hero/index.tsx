@@ -76,7 +76,7 @@ export function Hero() {
                                 </Text>
                             </VStack>
 
-                            <CustomButton onClick={redirectToProjects}>Check My Projects</CustomButton>
+                            <CustomButton onClick={redirectToProjects}>See my projects</CustomButton>
                         </VStack>
 
                         <SocialMediaBar>
