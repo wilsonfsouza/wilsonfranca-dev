@@ -27,7 +27,7 @@ export function Hero() {
             bgRepeat="no-repeat"
             position="relative"
             _before={{
-                content: '""',
+                content: `""`,
                 position: 'absolute',
                 top: "0",
                 right: "0",
@@ -48,38 +48,35 @@ export function Hero() {
                     alignItems="start"
                     h="100%"
                 >
-                    <FadeInWhenVisible style={{ margin: 'auto 0' }}>
-
+                    <VStack
+                        spacing="10"
+                        m="auto 0"
+                        alignItems={{ base: "center", md: "start" }}
+                        textAlign={{ base: "center", md: "left" }}
+                    >
                         <VStack
-                            spacing="10"
+                            spacing="2"
                             m="auto 0"
                             alignItems={{ base: "center", md: "start" }}
                             textAlign={{ base: "center", md: "left" }}
                         >
-                            <VStack
-                                spacing="2"
-                                m="auto 0"
-                                alignItems={{ base: "center", md: "start" }}
-                                textAlign={{ base: "center", md: "left" }}
-                            >
 
-                                <Heading fontWeight="bold" fontSize={{ base: "2.5rem", sm: "3rem", md: "4.5rem" }}>
-                                    Think<Box as="span" color="pink.600">. </Box>
+                            <Heading fontWeight="bold" fontSize={{ base: "2.5rem", sm: "3rem", md: "4.5rem" }}>
+                                Think<Box as="span" color="pink.600">. </Box>
                                     Plan<Box as="span" color="pink.600">. </Box>
                                     Innovate<Box as="span" color="pink.600">.</Box>
-                                </Heading>
-                                <Text
-                                    fontWeight="light"
-                                    fontSize={{ base: "1.25rem", sm: "1.75rem", md: "2.25rem" }}
-                                    maxWidth={{ base: "15.875rem", sm: "24.875rem", md: "31.875rem" }}
-                                >
-                                    I’m a Sofware Developer and UI/UX enthusiast
+                            </Heading>
+                            <Text
+                                fontWeight="light"
+                                fontSize={{ base: "1.25rem", sm: "1.75rem", md: "2.25rem" }}
+                                maxWidth={{ base: "15.875rem", sm: "24.875rem", md: "31.875rem" }}
+                            >
+                                I’m a Sofware Developer and UI/UX enthusiast
                                 </Text>
-                            </VStack>
-                            <CustomButton onClick={redirectToProjects}>See my projects</CustomButton>
-
                         </VStack>
-                    </FadeInWhenVisible>
+                        <CustomButton onClick={redirectToProjects}>See my projects</CustomButton>
+
+                    </VStack>
 
                     <SocialMediaBar>
                         <Divider orientation="horizontal" height="2px" minWidth="10px" flex="1" color="gray.500" />
