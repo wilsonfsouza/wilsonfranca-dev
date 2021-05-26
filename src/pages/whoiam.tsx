@@ -1,4 +1,4 @@
-import { Box, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { VStack, Wrap, WrapItem } from "@chakra-ui/react";
 
 import { TransitionSection } from "../components/TransitionSection";
 import { Section } from "../components/Section";
@@ -9,10 +9,13 @@ import { Paragraph } from "../components/Paragraph";
 import { GetStaticProps } from "next";
 import { CustomButton } from "../components/CustomButton";
 import { ExternalLink } from "../components/ExternalLink";
+import { SEO } from "../components/SEO";
 
 export default function WhoIAm() {
   return (
     <>
+      <SEO title="Who I Am" />
+
       <TransitionSection gradientDirection="normal" isBellowHero={false} />
 
       <FadeInWhenVisible>
