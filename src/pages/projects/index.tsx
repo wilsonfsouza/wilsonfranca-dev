@@ -5,7 +5,6 @@ import Prismic from '@prismicio/client';
 
 import { TransitionSection } from "../../components/TransitionSection";
 import { Section } from "../../components/Section";
-import { CustomButton } from "../../components/CustomButton";
 import { ProjectCard } from "../../components/ProjectCard";
 import { FadeInWhenVisible } from "../../components/FadeInWhenVisible";
 import { SEO } from "../../components/SEO";
@@ -21,7 +20,7 @@ interface ProjectsProps {
 
 export default function Projects({ projects }: ProjectsProps) {
     return (
-        <>
+        <main>
             <SEO title="Projects" />
 
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
@@ -35,12 +34,11 @@ export default function Projects({ projects }: ProjectsProps) {
                             </FadeInWhenVisible>
                         ))}
                     </SimpleGrid>
-                    {/* <CustomButton onClick={() => { }}>See more</CustomButton> */}
                 </VStack>
             </Section>
 
             <TransitionSection gradientDirection="upsidedown" />
-        </>
+        </main>
     )
 }
 
@@ -53,10 +51,9 @@ export const getStaticProps: GetStaticProps = async () => {
         Prismic.Predicates.at('document.type', 'project')
     ], {
         fetch: ['project.thumbnail'],
-        pageSize: 4,
-        orderings: '[document.first_publication_date]'
+        pageSize: 20,
+        orderings: '[document.last_publication_date desc]',
     });
-
 
     if (!response) {
         return {

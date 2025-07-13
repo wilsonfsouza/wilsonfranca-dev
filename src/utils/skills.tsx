@@ -11,7 +11,17 @@ import {
     SiMongodb,
     SiPostgresql,
     SiDocker,
-    SiJest
+    SiJest,
+    SiTailwindcss,
+    SiTerraform,
+    SiRedux,
+    SiWebpack,
+    SiGithubactions,
+    SiAzuredevops,
+    SiAmazonaws,
+    SiGooglecloud,
+    SiMaterialUi,
+    SiMicrosoftsqlserver,
 } from 'react-icons/si';
 
 export const skills = [
@@ -66,5 +76,45 @@ export const skills = [
     {
         icon: SiJest,
         title: "Jest",
+    },
+    {
+        icon: SiTailwindcss,
+        title: "Tailwind CSS",
+    },
+    {
+        icon: SiTerraform,
+        title: "Terraform",
+    },
+    {
+        icon: SiRedux,
+        title: "Redux",
+    },
+    {
+        icon: SiWebpack,
+        title: "Webpack",
+    },
+    {
+        icon: SiGithubactions,
+        title: "CI/CD",
+    },
+    {
+        icon: SiAzuredevops,
+        title: "Azure",
+    },
+    {
+        icon: SiAmazonaws,
+        title: "AWS",
+    },
+    {
+        icon: SiGooglecloud,
+        title: "GCP",
+    },
+    {
+        icon: SiMaterialUi,
+        title: "MUI",
+    },
+    {
+        icon: SiMicrosoftsqlserver,
+        title: "MS SQL",
     },
 ]

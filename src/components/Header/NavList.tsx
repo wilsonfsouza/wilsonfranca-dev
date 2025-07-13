@@ -1,6 +1,5 @@
 import { Stack, StackProps } from '@chakra-ui/react';
 
-import { ActiveLink } from './ActiveLink';
 import { NavLink } from './NavLink';
 
 interface NavListProps extends StackProps {
@@ -15,18 +14,10 @@ export function NavList({ direction = "row", ...rest }: NavListProps) {
             direction={direction}
             {...rest}
         >
-            <ActiveLink href="/" activeClassName="active">
-                <NavLink>HOME</NavLink>
-            </ActiveLink>
-            <ActiveLink href="/whoiam" activeClassName="active">
-                <NavLink>WHO I AM</NavLink>
-            </ActiveLink>
-            <ActiveLink href="/projects" activeClassName="active">
-                <NavLink>PROJECTS</NavLink>
-            </ActiveLink>
-            <ActiveLink href="/contact" activeClassName="active">
-                <NavLink>CONTACT</NavLink>
-            </ActiveLink>
+            <NavLink href="/" >HOME</NavLink>
+            <NavLink href="/whoiam" >WHO I AM</NavLink>
+            <NavLink href="/projects" >PROJECTS</NavLink>
+            <NavLink href="/contact" >CONTACT</NavLink>
         </Stack>
     );
 }

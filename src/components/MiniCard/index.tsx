@@ -1,4 +1,4 @@
-import { Flex, Heading, VStack, Icon } from "@chakra-ui/react";
+import { Flex, Heading, HStack, Icon } from "@chakra-ui/react";
 import { IconBaseProps } from 'react-icons';
 
 interface MiniCardProps {
@@ -8,25 +8,25 @@ interface MiniCardProps {
 
 export function MiniCard({ title, icon: CustomIcon }: MiniCardProps) {
     return (
-        <VStack
+        <HStack
             spacing={{ base: "1rem", lg: "1.5rem" }}
             bgColor="gray.700"
-            w={{ base: "6.5rem", sm: "10.75rem", md: "11rem" }}
-            h={{ base: "8rem", sm: "10.75rem", md: "11rem" }}
+            w={{ base: "16rem" }}
+            h={{ base: "5rem" }}
             alignItems="center"
-            justifyContent="center"
+            justifyContent="start"
             borderRadius="0.625rem"
-            padding="1.5rem"
+            padding="0.5rem 1.5rem"
         >
             <Flex
-                w={{ base: "4rem", md: "5.5rem" }}
-                h={{ base: "4rem", md: "5.5rem" }}
+                w={{ base: "3rem" }}
+                h={{ base: "3rem" }}
                 borderRadius="50%"
                 alignItems="center"
                 justifyContent="center"
                 background="linear-gradient(136.01deg, #1E1C27 15.64%, rgba(30, 28, 39, 0.38) 83.84%)"
             >
-                <Icon as={CustomIcon} fontSize={{ base: "1.5rem", sm: "1.875rem", md: "2.5rem" }} title={title} />
+                <Icon as={CustomIcon} fontSize={{ base: "1.25rem" }} title={title} />
             </Flex>
 
             <Heading
@@ -39,6 +39,6 @@ export function MiniCard({ title, icon: CustomIcon }: MiniCardProps) {
             >
                 {title}
             </Heading>
-        </VStack >
+        </HStack >
     );
 }

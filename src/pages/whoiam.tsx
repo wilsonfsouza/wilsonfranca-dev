@@ -13,7 +13,7 @@ import { SEO } from "../components/SEO";
 
 export default function WhoIAm() {
   return (
-    <>
+    <main>
       <SEO title="Who I Am" />
 
       <TransitionSection gradientDirection="normal" isBellowHero={false} />
@@ -22,15 +22,15 @@ export default function WhoIAm() {
         <Section title="Who I Am">
           <VStack spacing="3rem" w="100%" alignItems="start">
             <Paragraph>
-              I’m Wilson. I’m a Software Developer and UI/UX enthusiast based in Redding, CA.
+              I’m Wilson. With over 5 years of professional experience, I am a Full Stack Developer with a strong background in Front End (UI/UX) and Geographic Information Systems (GIS). I've built scalable, data-driven solutions - ranging from small applications to enterprise platforms serving over a million users - that are intuitive, accessible, and high-performing. 
           </Paragraph>
             <Paragraph>
-              My background is in Environmental Engineering. I have worked with Python in the Geographic Information Systems (GIS) field for 2 years before transitioning into web development.
+              Worked in all stages of software development, including planning, designing, building, testing, and deployment.
           </Paragraph>
             <Paragraph>
-              During the day, I am a Full-Stack Developer at the Spatial Studies Lab at Rice University. During the evenings, I spend time working on personal projects and volunteering at local non-profits.
+              Technology and sectors that I have developed solutions for: Healthcare, Services, Quality Assurance (Data Visualization Tools), Geographic Information Systems (GIS), Higher Education, Logistics, and Environmental Science;
           </Paragraph>
-            <ExternalLink href="/Software-Developer_Wilson_Franca_de_Souza.pdf">
+            <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
               <CustomButton>See Resume</CustomButton>
             </ExternalLink>
           </VStack>
@@ -56,7 +56,7 @@ export default function WhoIAm() {
       </Section>
 
       <TransitionSection gradientDirection="upsidedown" />
-    </>
+    </main>
   )
 }
 

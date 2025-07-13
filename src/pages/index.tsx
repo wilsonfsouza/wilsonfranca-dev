@@ -32,7 +32,7 @@ export default function Home({ projects }: HomeProps) {
   }, [router]);
 
   return (
-    <>
+    <main>
       <SEO title="Home" />
       <Hero />
       <TransitionSection gradientDirection="normal" isBellowHero={true} />
@@ -88,7 +88,7 @@ export default function Home({ projects }: HomeProps) {
       </Section>
 
       <TransitionSection gradientDirection="upsidedown" />
-    </>
+    </main>
   )
 }
 
@@ -103,7 +103,7 @@ export const getStaticProps: GetStaticProps = async () => {
   ], {
     fetch: ['project.thumbnail'],
     pageSize: 4,
-    orderings: '[document.first_publication_date]'
+    orderings: '[document.last_publication_date desc]'
   });
 
 
