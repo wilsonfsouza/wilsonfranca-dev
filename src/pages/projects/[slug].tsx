@@ -60,9 +60,9 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
                                     <CustomButton>Live</CustomButton>
                                 </ExternalLink>
                             )}
-                            <ExternalLink href={project.githubRepository}>
+                            {project.githubRepository && <ExternalLink href={project.githubRepository}>
                                 <CustomButton isPrimary={false}>Code</CustomButton>
-                            </ExternalLink>
+                            </ExternalLink>}
                         </Stack>
                     </VStack>
                 </Section>
@@ -87,7 +87,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const prismic = getPrismicClient();
 
     const response = await prismic.getByUID('project', String(slug), {});
-
+    
     if (!response) {
         return {
             props: {
@@ -102,8 +102,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         thumbnailUrl: response.data.thumbnail.url,
         technologies: RichText.asText(response.data.technologies),
         description: RichText.asText(response.data.description),
-        websiteUrl: response.data.website_url.url,
-        githubRepository: response.data.github_repository.url
+        websiteUrl: response.data.website_url?.url ?? null,
+        githubRepository: response.data.github_repository?.url ?? null
     }
 
     return {
