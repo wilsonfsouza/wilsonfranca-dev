@@ -1,4 +1,4 @@
-import { Link, LinkProps } from '@chakra-ui/react';
+import NextLink, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
 
 interface NavLinkProps extends LinkProps {
@@ -12,15 +12,12 @@ export const NavLink = ({children, ...props}: NavLinkProps) => {
     
     return (
         <span style={{color, padding: '1rem 0'}}>
-            <Link
-                _hover={{
-                    textDecoration: 'none',
-                    color: "#FFF"
-                }}
+            <NextLink
+                className="link"
                 {...props}
             >
                 {children}
-            </Link>
+            </NextLink>
         </span>
     )
 };
