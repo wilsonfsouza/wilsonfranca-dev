@@ -53,10 +53,9 @@ export const getStaticProps: GetStaticProps = async () => {
         Prismic.Predicates.at('document.type', 'project')
     ], {
         fetch: ['project.thumbnail'],
-        pageSize: 4,
-        orderings: '[document.first_publication_date]'
+        pageSize: 10,
+        orderings: '[document.last_publication_date desc]',
     });
-
 
     if (!response) {
         return {

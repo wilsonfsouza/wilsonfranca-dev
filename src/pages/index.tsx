@@ -103,7 +103,7 @@ export const getStaticProps: GetStaticProps = async () => {
   ], {
     fetch: ['project.thumbnail'],
     pageSize: 4,
-    orderings: '[document.first_publication_date]'
+    orderings: '[document.last_publication_date desc]'
   });
 
 
