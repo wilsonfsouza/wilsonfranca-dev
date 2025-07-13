@@ -15,7 +15,7 @@ export function ActiveLink({ children, activeClassName, ...rest }: ActiveLinkPro
     const color = className ? '#fff' : '#999591';
 
     return (
-        <NextLink {...rest} legacyBehavior passHref>
+        <NextLink {...rest} passHref legacyBehavior>
             {cloneElement(children, { color: color })}
         </NextLink>
     );

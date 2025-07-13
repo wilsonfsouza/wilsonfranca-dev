@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ href, imgSrc, layoutId }: ProjectCardProps) {
     return (
-        <NextLink href={href}>
+        <NextLink href={href} legacyBehavior>
             <Box
                 as={motion.div}
                 layoutId={layoutId}
