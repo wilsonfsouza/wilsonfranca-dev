@@ -30,7 +30,7 @@ export default function WhoIAm() {
             <Paragraph>
               During the day, I am a Full-Stack Developer at the Spatial Studies Lab at Rice University. During the evenings, I spend time working on personal projects and volunteering at local non-profits.
           </Paragraph>
-            <ExternalLink href="/Software-Developer_Wilson_Franca_de_Souza.pdf">
+            <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
               <CustomButton>See Resume</CustomButton>
             </ExternalLink>
           </VStack>
