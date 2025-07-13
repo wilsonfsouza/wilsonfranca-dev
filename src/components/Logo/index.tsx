@@ -16,9 +16,9 @@ export function Logo({ onClickFunct, isClickable = false }: LogoProps) {
         return (
             <>
                 {isMobile ? (
-                    <NextImage height={30} width={159} src="/logo-full.svg" alt="wilfranca" onClick={onClickFunct} style={{ cursor: 'pointer', objectFit: 'contain' }} />
+                    <NextImage height={30} width={159} src="/logo-full.svg" alt="wilfranca" onClick={onClickFunct} style={{ cursor: 'pointer', objectFit: 'contain' }} priority />
                 ) : (
-                    <NextImage height={39} width={205} src="/logo-full.svg" alt="wilfranca" onClick={onClickFunct} style={{ cursor: 'pointer', objectFit: 'contain' }} />
+                    <NextImage height={39} width={205} src="/logo-full.svg" alt="wilfranca" onClick={onClickFunct} style={{ cursor: 'pointer', objectFit: 'contain' }} priority />
                 )}
             </>
         );
@@ -26,9 +26,9 @@ export function Logo({ onClickFunct, isClickable = false }: LogoProps) {
     return (
         <>
             {isMobile ? (
-                <NextImage height={30} width={159} src="/logo-full.svg" alt="wilfranca" style={{ objectFit: 'contain' }} />
+                <NextImage height={30} width={159} src="/logo-full.svg" alt="wilfranca" style={{ objectFit: 'contain' }} priority />
             ) : (
-                <NextImage height={39} width={205} src="/logo-full.svg" alt="wilfranca" style={{ objectFit: 'contain' }} />
+                <NextImage height={39} width={205} src="/logo-full.svg" alt="wilfranca" style={{ objectFit: 'contain' }} priority />
             )}
         </>
     );
