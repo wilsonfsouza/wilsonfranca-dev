@@ -26,7 +26,7 @@ export function FadeInWhenVisible({ children, ...rest }: FadeInWhenVisibleProps)
                 visible: { opacity: 1, scale: 1 },
                 hidden: { opacity: 0, scale: 0.9 }
             }}
-            style={{ width: '100%' }}
+            style={{ width: '100%', flex: '1 0 auto' }}
             {...rest}
         >
             {children}

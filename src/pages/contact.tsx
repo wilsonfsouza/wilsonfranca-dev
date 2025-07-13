@@ -16,11 +16,11 @@ export default function Contact() {
     });
 
     return (
-        <>
+        <main style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <SEO title="Contact" />
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
 
-            <FadeInWhenVisible>
+            <FadeInWhenVisible style={{flex: '1 0 auto'}}>
                 <Section title="Contact Me">
                     <VStack spacing="3rem" w="100%" alignItems="start">
                         <Paragraph>
@@ -49,7 +49,7 @@ export default function Contact() {
             </FadeInWhenVisible>
 
             <TransitionSection gradientDirection="upsidedown" />
-        </>
+        </main>
     )
 }
 

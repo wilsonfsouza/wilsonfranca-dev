@@ -36,7 +36,7 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
     }, [router]);
 
     return (
-        <>
+        <main>
             <SEO title={project.title} />
             <TransitionSection gradientDirection="normal" isBellowHero={false} />
             <FadeInWhenVisible>
@@ -68,7 +68,7 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
                 </Section>
             </FadeInWhenVisible>
             <TransitionSection gradientDirection="upsidedown" isBellowHero={false} />
-        </>
+        </main>
     )
 }
 

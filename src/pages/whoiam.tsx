@@ -13,7 +13,7 @@ import { SEO } from "../components/SEO";
 
 export default function WhoIAm() {
   return (
-    <>
+    <main>
       <SEO title="Who I Am" />
 
       <TransitionSection gradientDirection="normal" isBellowHero={false} />
@@ -56,7 +56,7 @@ export default function WhoIAm() {
       </Section>
 
       <TransitionSection gradientDirection="upsidedown" />
-    </>
+    </main>
   )
 }
 

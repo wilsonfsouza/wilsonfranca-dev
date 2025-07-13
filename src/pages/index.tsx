@@ -32,7 +32,7 @@ export default function Home({ projects }: HomeProps) {
   }, [router]);
 
   return (
-    <>
+    <main>
       <SEO title="Home" />
       <Hero />
       <TransitionSection gradientDirection="normal" isBellowHero={true} />
@@ -88,7 +88,7 @@ export default function Home({ projects }: HomeProps) {
       </Section>
 
       <TransitionSection gradientDirection="upsidedown" />
-    </>
+    </main>
   )
 }
 
