@@ -7,7 +7,9 @@ interface SEOProps {
 export function SEO({ title }: SEOProps) {
     return (
         <Head>
-            <title>wilfranca | {title}</title>
+            <title>
+                {`wilfranca | ${title}`}
+            </title>
 
             <link rel="shortcut icon" href="/favicons/logo-short-pink.png" />
             <meta name="title" content={`wilfranca | ${title}`} />
