@@ -21,25 +21,33 @@ export default function WhoIAm() {
         <Section title="Who I Am">
           <VStack spacing="3rem" w="100%" alignItems="start">
             <Paragraph>
-              I’m Wilson. With over 5 years of professional experience, I am a
-              Full Stack Developer with a strong background in Front End (UI/UX)
-              and Geographic Information Systems (GIS). I've built scalable,
-              data-driven solutions - ranging from small applications to
-              enterprise platforms serving over a million users - that are
-              intuitive, accessible, and high-performing.
+              I am a Senior Frontend Engineer / Developer, full stack enabled
+              and GIS background, with <b>5+ years of experience</b> building
+              everything from lightweight internal tools to scalable enterprise
+              applications serving over a million users. I focus on{" "}
+              <b>accessibility</b>,<b>performance</b>, and{" "}
+              <b>solving user problems</b> throughout the software lifecycle,
+              from technical planning and architecture to hands-on development,
+              testing, and production deployment.
             </Paragraph>
             <Paragraph>
-              Worked in all stages of software development, including planning,
-              designing, building, testing, and deployment.
+              I'm experienced with React, Next.js, Node.js, Python, and cloud
+              environments such as AWS, GCP, and Azure. I thrive in fast-paced,
+              cross-functional teams, collaborating with designers, developers,
+              and product stakeholders to translate user needs into new features
+              and solutions.
             </Paragraph>
             <Paragraph>
-              Technology and sectors that I have developed solutions for:
-              Healthcare, Services, Quality Assurance (Data Visualization
-              Tools), Geographic Information Systems (GIS), Higher Education,
-              Logistics, and Environmental Science;
+              I bring a mix of <b>system design</b>, <b>product thinking</b>,
+              and <b>leadership</b>, and I’m driven by building tools that
+              people actually enjoy using.
+            </Paragraph>
+            <Paragraph>
+              <b>Industry Experience:</b> Healthcare, SaaS, Logistics, GIS,
+              Education, Environmental Science
             </Paragraph>
             <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
-              <CustomButton>See Resume</CustomButton>
+              <CustomButton>See more on LinkedIn</CustomButton>
             </ExternalLink>
           </VStack>
         </Section>
