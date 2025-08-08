@@ -32,10 +32,10 @@ export default function WhoIAm() {
             </Paragraph>
             <Paragraph>
               I'm experienced with React, Next.js, Node.js, Python, and cloud
-              environments such as AWS, GCP, and Azure. I thrive in fast-paced,
-              cross-functional teams, collaborating with designers, developers,
-              and product stakeholders to translate user needs into new features
-              and solutions.
+              environments such as AWS, GCP, and Azure. I thrive in{" "}
+              <b>fast-paced</b>,<b>cross-functional teams</b>, collaborating
+              with designers, developers, and product stakeholders to translate
+              user needs into new features and solutions.
             </Paragraph>
             <Paragraph>
               I bring a mix of <b>system design</b>, <b>product thinking</b>,
