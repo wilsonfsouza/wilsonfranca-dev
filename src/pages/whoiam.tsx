@@ -19,7 +19,7 @@ export default function WhoIAm() {
 
       <FadeInWhenVisible>
         <Section title="Who I Am">
-          <VStack spacing="3rem" w="100%" alignItems="start">
+          <VStack gap="3rem" w="100%" alignItems="start">
             <Paragraph>
               I am a Senior Frontend Engineer / Developer, full stack enabled
               and GIS background, with <b>5+ years of experience</b> building

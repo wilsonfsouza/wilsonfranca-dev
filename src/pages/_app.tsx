@@ -1,18 +1,18 @@
-import { AppProps } from 'next/app';
-import { ChakraProvider } from '@chakra-ui/react';
-import { theme } from '../styles/theme';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import '../styles/global.css';
+import { ChakraProvider } from "@chakra-ui/react";
+import { AppProps } from "next/app";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import "../styles/global.css";
+import { theme } from "../styles/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider value={theme}>
       <Header />
-        <Component {...pageProps} />
+      <Component {...pageProps} />
       <Footer />
     </ChakraProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

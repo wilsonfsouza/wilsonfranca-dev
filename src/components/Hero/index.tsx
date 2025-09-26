@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Separator, Text, VStack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
 import { CustomButton } from "../CustomButton";
@@ -22,7 +22,7 @@ export function Hero() {
       bgImage="url('/hero-min.png') "
       backgroundBlendMode="screen"
       backgroundSize="cover"
-      bgPosition="center"
+      backgroundPosition="center"
       bgRepeat="no-repeat"
       position="relative"
       _before={{
@@ -33,19 +33,19 @@ export function Hero() {
         bottom: "0",
         left: "0",
         background:
-          "linear-gradient(180deg, #110E11 0%, rgba(34, 30, 38, 0) 100%)",
+          "linear-gradient(180deg, {colors.gray.900} 0%, rgba(34, 30, 38, 0) 100%)",
       }}
     >
       <Flex zIndex="1" h="100%" w="100%" mx="auto" maxWidth={1480}>
         <VStack flex="1" alignItems="start" h="100%">
           <VStack
-            spacing="10"
+            gap="10"
             m="auto 0"
             alignItems={{ base: "center", md: "start" }}
             textAlign={{ base: "center", md: "left" }}
           >
             <VStack
-              spacing="2"
+              gap="2"
               m="auto 0"
               alignItems={{ base: "center", md: "start" }}
               textAlign={{ base: "center", md: "left" }}
@@ -53,6 +53,7 @@ export function Hero() {
               <Heading
                 fontWeight="bold"
                 fontSize={{ base: "2.5rem", sm: "3rem", md: "4.5rem" }}
+                lineHeight={{ base: "1.33", md: "1.2" }}
               >
                 Think
                 <Box as="span" color="pink.600">
@@ -85,7 +86,7 @@ export function Hero() {
           </VStack>
 
           <SocialMediaBar>
-            <Divider
+            <Separator
               orientation="horizontal"
               height="2px"
               minWidth="10px"

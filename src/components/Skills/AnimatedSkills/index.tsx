@@ -1,4 +1,4 @@
-import { List, ListItem } from "@chakra-ui/react";
+import { List } from "@chakra-ui/react";
 import { MiniCard } from "../MiniCard";
 import { ISkills } from "../utils/skills";
 
@@ -13,7 +13,7 @@ export const AnimatedSkills = ({
   skills,
   isDuplicated = false,
 }: AnimatedSkillsProps) => (
-  <List
+  <List.Root
     listStyleType="none"
     display="flex"
     alignItems={"center"}
@@ -23,9 +23,9 @@ export const AnimatedSkills = ({
     aria-hidden={isDuplicated}
   >
     {skills.map((skill, index) => (
-      <ListItem key={`${skill.title}-${index}`}>
+      <List.Item key={`${skill.title}-${index}`}>
         <MiniCard icon={skill.icon} title={skill.title} />
-      </ListItem>
+      </List.Item>
     ))}
-  </List>
+  </List.Root>
 );
