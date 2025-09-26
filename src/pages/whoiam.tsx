@@ -7,7 +7,6 @@ import { FadeInWhenVisible } from "../components/FadeInWhenVisible";
 import { Paragraph } from "../components/Paragraph";
 import { Section } from "../components/Section";
 import { SEO } from "../components/SEO";
-import { Skills } from "../components/Skills";
 import { TransitionSection } from "../components/TransitionSection";
 
 export default function WhoIAm() {
@@ -53,7 +52,7 @@ export default function WhoIAm() {
         </Section>
       </FadeInWhenVisible>
 
-      <Skills />
+      {/* <Skills /> */}
 
       <TransitionSection gradientDirection="upsidedown" />
     </main>

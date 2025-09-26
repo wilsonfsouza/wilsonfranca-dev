@@ -5,11 +5,6 @@ import { MiniCard } from "./MiniCard";
 import { skillsRow1, skillsRow2, skillsRow3 } from "./utils/skills";
 
 export const Skills = () => {
-  // const [prefersReducedMotion] = useMediaQuery(
-  //   "(prefers-reduced-motion: reduce)"
-  // );
-
-  // if (prefersReducedMotion) {
   const skills = [...skillsRow1, ...skillsRow2, ...skillsRow3];
 
   return (
@@ -31,51 +26,4 @@ export const Skills = () => {
       </Wrap>
     </Section>
   );
-  // }
-
-  // const animationFirstRow = `slideLeft 30s linear infinite`;
-  // const animationSecondRow = `slideRight 30s linear infinite`;
-  // const animationThirdRow = `slideLeft 30s linear infinite`;
-
-  // return (
-  //   <Section title="Skills">
-  //     <Flex paddingBlock={"0.5rem"} flexDirection="column" overflow={"hidden"}>
-  //       <FadeInWhenVisible>
-  //         <AnimatedSkillsRow>
-  //           <AnimatedSkills skills={skillsRow1} animation={animationFirstRow} />
-  //           <AnimatedSkills
-  //             skills={skillsRow1}
-  //             animation={animationFirstRow}
-  //             isDuplicated
-  //           />
-  //         </AnimatedSkillsRow>
-  //       </FadeInWhenVisible>
-
-  //       <FadeInWhenVisible>
-  //         <AnimatedSkillsRow>
-  //           <AnimatedSkills
-  //             skills={skillsRow2}
-  //             animation={animationSecondRow}
-  //           />
-  //           <AnimatedSkills
-  //             skills={skillsRow2}
-  //             animation={animationSecondRow}
-  //             isDuplicated
-  //           />
-  //         </AnimatedSkillsRow>
-  //       </FadeInWhenVisible>
-
-  //       <FadeInWhenVisible>
-  //         <AnimatedSkillsRow>
-  //           <AnimatedSkills skills={skillsRow3} animation={animationThirdRow} />
-  //           <AnimatedSkills
-  //             skills={skillsRow3}
-  //             animation={animationThirdRow}
-  //             isDuplicated
-  //           />
-  //         </AnimatedSkillsRow>
-  //       </FadeInWhenVisible>
-  //     </Flex>
-  //   </Section>
-  // );
 };
