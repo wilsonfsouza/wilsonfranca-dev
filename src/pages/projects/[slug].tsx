@@ -40,13 +40,10 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
       <SEO title={project.title} />
       <TransitionSection gradientDirection="normal" isBellowHero={false} />
       <FadeInWhenVisible>
-        <Section title={project.title} hasBackButton={true} goBack={handleBack}>
+        <Section title={project.title} goBack={handleBack}>
           <VStack gap={["3.375rem", "4.875rem", "6.375rem"]}>
             <VStack gap="2rem" alignItems="flex-start">
-              <ProjectImage
-                layoutId={project.slug}
-                imageSrc={project.thumbnailUrl}
-              />
+              <ProjectImage imageSrc={project.thumbnailUrl} />
 
               <ProjectDetails title="Technologies:">
                 {project.technologies}
