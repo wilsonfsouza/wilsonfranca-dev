@@ -7,7 +7,6 @@ import { FadeInWhenVisible } from "../components/FadeInWhenVisible";
 import { Paragraph } from "../components/Paragraph";
 import { Section } from "../components/Section";
 import { SEO } from "../components/SEO";
-import { Skills } from "../components/Skills";
 import { TransitionSection } from "../components/TransitionSection";
 
 export default function WhoIAm() {
@@ -19,7 +18,7 @@ export default function WhoIAm() {
 
       <FadeInWhenVisible>
         <Section title="Who I Am">
-          <VStack spacing="3rem" w="100%" alignItems="start">
+          <VStack gap="3rem" w="100%" alignItems="start">
             <Paragraph>
               I am a Senior Frontend Engineer / Developer, full stack enabled
               and GIS background, with <b>5+ years of experience</b> building
@@ -53,7 +52,7 @@ export default function WhoIAm() {
         </Section>
       </FadeInWhenVisible>
 
-      <Skills />
+      {/* <Skills /> */}
 
       <TransitionSection gradientDirection="upsidedown" />
     </main>

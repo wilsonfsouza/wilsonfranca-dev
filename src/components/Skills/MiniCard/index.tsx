@@ -9,7 +9,7 @@ interface MiniCardProps {
 export function MiniCard({ title, icon: CustomIcon }: MiniCardProps) {
   return (
     <HStack
-      spacing={{ base: "1rem", lg: "1.5rem" }}
+      gap={{ base: "1rem", lg: "1.5rem" }}
       bgColor="gray.700"
       w={{ base: "16rem" }}
       h={{ base: "5rem" }}
@@ -26,7 +26,11 @@ export function MiniCard({ title, icon: CustomIcon }: MiniCardProps) {
         justifyContent="center"
         background="linear-gradient(136.01deg, #1E1C27 15.64%, rgba(30, 28, 39, 0.38) 83.84%)"
       >
-        <Icon as={CustomIcon} fontSize={{ base: "1.25rem" }} title={title} />
+        <Icon
+          as={CustomIcon}
+          fontSize={{ base: "1.25rem" }}
+          aria-label={title}
+        />
       </Flex>
 
       <Heading
