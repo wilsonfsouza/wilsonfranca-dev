@@ -3,6 +3,7 @@ import Prismic from "@prismicio/client";
 import { GetStaticProps } from "next";
 import { getPrismicClient } from "../../services/prismic";
 
+import { RichText } from "prismic-dom";
 import { FadeInWhenVisible } from "../../components/FadeInWhenVisible";
 import { ProjectCard } from "../../components/ProjectCard";
 import { Section } from "../../components/Section";
@@ -12,6 +13,9 @@ import { TransitionSection } from "../../components/TransitionSection";
 type Project = {
   slug: string;
   thumbnailUrl: string;
+  title: string;
+  description: string;
+  technologies: string[];
 };
 
 interface ProjectsProps {
@@ -27,13 +31,16 @@ export default function Projects({ projects }: ProjectsProps) {
 
       <Section title="Projects">
         <VStack gap="3rem" w="100%">
-          <SimpleGrid columns={{ sm: 1, md: 2 }} gap="2rem" w="100%">
+          <SimpleGrid columns={{ base: 1, lg: 2 }} gap="2rem" w="100%">
             {projects.map((project) => (
               <FadeInWhenVisible key={project.slug}>
                 <ProjectCard
                   href={`/projects/${project.slug}`}
                   imgSrc={project.thumbnailUrl}
                   layoutId={project.slug}
+                  title={project.title}
+                  description={project.description}
+                  technologies={project.technologies}
                 />
               </FadeInWhenVisible>
             ))}
@@ -46,7 +53,7 @@ export default function Projects({ projects }: ProjectsProps) {
   );
 }
 
-const ONE_DAY = 60 * 60 * 24;
+const ONE_HOUR = 60 * 60 * 1;
 
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
@@ -54,9 +61,14 @@ export const getStaticProps: GetStaticProps = async () => {
   const response = await prismic.query(
     [Prismic.Predicates.at("document.type", "project")],
     {
-      fetch: ["project.thumbnail"],
+      fetch: [
+        "project.thumbnail",
+        "project.title",
+        "project.short_description",
+        "project.technologies_card_list",
+      ],
       pageSize: 20,
-      orderings: "[document.last_publication_date desc]",
+      orderings: "[my.project.date desc]",
     }
   );
 
@@ -65,14 +77,21 @@ export const getStaticProps: GetStaticProps = async () => {
       props: {
         projects: [],
       },
-      revalidate: ONE_DAY,
+      revalidate: ONE_HOUR,
     };
   }
 
   const projects = response.results.map((project) => {
+    const hasListOfTech = project.data.technologies_card_list.length > 0;
+    const technologies = hasListOfTech
+      ? project.data.technologies_card_list.map((stack) => stack.tech)
+      : [];
     return {
       slug: project.uid,
       thumbnailUrl: project.data.thumbnail.url,
+      title: RichText.asText(project.data.title),
+      description: RichText.asText(project.data.short_description),
+      technologies,
     };
   });
 
@@ -80,6 +99,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       projects,
     },
-    revalidate: ONE_DAY,
+    revalidate: ONE_HOUR,
   };
 };
