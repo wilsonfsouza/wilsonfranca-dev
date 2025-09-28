@@ -42,6 +42,7 @@ export function NavBar() {
             ref={navBarButtonRef}
             aria-label="Open Navigation Menu"
             variant="plain"
+            color="white"
             _hover={{
               color: "pink.600",
             }}

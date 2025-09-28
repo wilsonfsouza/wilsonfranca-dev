@@ -2,6 +2,7 @@ import { VStack, useBreakpointValue } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 import { IoIosMail, IoMdPhonePortrait } from "react-icons/io";
 
+import { FaLinkedinIn } from "react-icons/fa";
 import { FadeInWhenVisible } from "../components/FadeInWhenVisible";
 import { ContactInfoItem } from "../components/Footer/ContactInfoItem";
 import { Paragraph } from "../components/Paragraph";
@@ -45,6 +46,9 @@ export default function Contact() {
                 ) : (
                   <Paragraph>wilson.franca.92@gmail.com</Paragraph>
                 )}
+              </ContactInfoItem>
+              <ContactInfoItem direction="row" icon={FaLinkedinIn}>
+                <Paragraph>@wilsonfsouza</Paragraph>
               </ContactInfoItem>
             </VStack>
           </VStack>

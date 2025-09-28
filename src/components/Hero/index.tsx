@@ -1,4 +1,13 @@
-import { Box, Flex, Heading, Separator, Text, VStack } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Flex,
+  Heading,
+  HStack,
+  Separator,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
 import { CustomButton } from "../CustomButton";
@@ -37,7 +46,7 @@ export function Hero() {
       }}
     >
       <Flex zIndex="1" h="100%" w="100%" mx="auto" maxWidth={1480}>
-        <VStack flex="1" alignItems="start" h="100%">
+        <VStack flex="1" alignItems={{ base: "center", md: "start" }} h="100%">
           <VStack
             gap="10"
             m="auto 0"
@@ -50,6 +59,28 @@ export function Hero() {
               alignItems={{ base: "center", md: "start" }}
               textAlign={{ base: "center", md: "left" }}
             >
+              <HStack
+                flexWrap="wrap"
+                justifyContent={{ base: "center", md: "start" }}
+              >
+                <Badge
+                  size={{ base: "md", md: "lg" }}
+                  variant="outline"
+                  colorPalette={"gray"}
+                  color={"white"}
+                >
+                  Full Stack Engineer
+                </Badge>
+                <Badge
+                  size={{ base: "md", md: "lg" }}
+                  variant="outline"
+                  colorPalette={"gray"}
+                  color={"white"}
+                >
+                  Frontend Specialist
+                </Badge>
+              </HStack>
+
               <Heading
                 fontWeight="bold"
                 fontSize={{ base: "2.5rem", sm: "3rem", md: "4.5rem" }}
@@ -68,16 +99,22 @@ export function Hero() {
                   .
                 </Box>
               </Heading>
+
               <Text
                 fontWeight="light"
                 fontSize={{ base: "1.25rem", sm: "1.75rem", md: "2.25rem" }}
                 maxWidth={{
-                  base: "15.875rem",
+                  base: "23.875rem",
                   sm: "24.875rem",
-                  md: "31.875rem",
+                  md: "46rem",
                 }}
+                color="white"
               >
-                I’m a Senior Sofware Developer, UI/UX and AI enthusiast
+                I help you to create experiences that{" "}
+                <Box as="span" color="pink.600">
+                  maximize business value
+                </Box>
+                , just like I did with Northwell Health, FieldRoutes, and more.
               </Text>
             </VStack>
             <CustomButton onClick={redirectToProjects}>
