@@ -57,7 +57,7 @@ export function ProjectCard({
           />
 
           <Box
-            padding="1.5rem"
+            padding={{ base: "0.5rem", lg: "1.5rem" }}
             display={"flex"}
             flexGrow={1}
             flexDirection={"column"}
