@@ -15,7 +15,7 @@ export function NavList({ direction = "row", ...rest }: NavListProps) {
       {...rest}
     >
       <NavLink href="/">HOME</NavLink>
-      <NavLink href="/whoiam">WHO I AM</NavLink>
+      <NavLink href="/whoiam">ABOUT ME</NavLink>
       <NavLink href="/projects">PROJECTS</NavLink>
       <NavLink href="/contact">CONTACT</NavLink>
     </Stack>

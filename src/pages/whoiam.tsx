@@ -12,28 +12,27 @@ import { TransitionSection } from "../components/TransitionSection";
 export default function WhoIAm() {
   return (
     <main>
-      <SEO title="Who I Am" />
+      <SEO title="About Me" />
 
       <TransitionSection gradientDirection="normal" isBellowHero={false} />
 
       <FadeInWhenVisible>
-        <Section title="Who I Am">
-          <VStack gap="3rem" w="100%" alignItems="start">
+        <Section title="About Me">
+          <VStack gap="1.5rem" w="100%" alignItems="start">
             <Paragraph>
-              I am a Senior Frontend Engineer / Developer, full stack enabled
-              and GIS background, with <b>5+ years of experience</b> building
-              everything from lightweight internal tools to scalable enterprise
-              applications serving over a million users. I focus on{" "}
-              <b>accessibility</b>,<b>performance</b>, and{" "}
-              <b>solving user problems</b> throughout the software lifecycle,
-              from technical planning and architecture to hands-on development,
-              testing, and production deployment.
+              I am a Full Stack Software Engineer, Frontend Specialist, with{" "}
+              <b>5+ years of experience</b> building everything from lightweight
+              internal tools to scalable enterprise applications serving over a
+              million users. I focus on <b>accessibility</b>, <b>performance</b>
+              , and <b>solving user problems</b> throughout the software
+              lifecycle, from technical planning and architecture to hands-on
+              development, testing, and production deployment.
             </Paragraph>
             <Paragraph>
               I'm experienced with React, Next.js, Node.js, Python, and cloud
-              environments such as AWS, GCP, and Azure. I thrive in{" "}
-              <b>fast-paced</b>,<b>cross-functional teams</b>, collaborating
-              with designers, developers, and product stakeholders to translate
+              platforms. I thrive in <b>fast-paced</b>,
+              <b>cross-functional teams</b>, collaborating with designers,
+              developers, product managers, and other stakeholders to translate
               user needs into new features and solutions.
             </Paragraph>
             <Paragraph>
@@ -41,11 +40,21 @@ export default function WhoIAm() {
               and <b>leadership</b>, and I’m driven by building tools that
               people actually enjoy using.
             </Paragraph>
-            <Paragraph>
-              <b>Industry Experience:</b> Healthcare, SaaS, Logistics, GIS,
-              Education, Environmental Science
-            </Paragraph>
-            <ExternalLink href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US">
+            <VStack gap="1.5rem" w="100%" alignItems="start" mt="4">
+              <Paragraph>
+                <b style={{ color: "#C1476C" }}>Industry Experience:</b>{" "}
+                Healthcare, Trade Services, SaaS, Logistics, Education,
+                Emergency Response, Environmental Science.
+              </Paragraph>
+              <Paragraph>
+                <b style={{ color: "#C1476C" }}>Previous background:</b>{" "}
+                Geographic Information Systems (GIS), Environmental Engineering.
+              </Paragraph>
+            </VStack>
+            <ExternalLink
+              mt="4"
+              href="https://www.linkedin.com/in/wilsonfsouza/?locale=en_US"
+            >
               <CustomButton>See more on LinkedIn</CustomButton>
             </ExternalLink>
           </VStack>
